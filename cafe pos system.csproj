@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\frmlogin.cs">
+    <Compile Include="forms\frmInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmlogin.Designer.cs">
-      <DependentUpon>frmlogin.cs</DependentUpon>
+    <Compile Include="forms\frmInvoice.designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmItems.designer.cs">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ucInvoiceItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\ucInvoiceItem.designer.cs">
+      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ucMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\ucMenu.Designer.cs">
+      <DependentUpon>ucMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="forms\frmlogin.resx">
-      <DependentUpon>frmlogin.cs</DependentUpon>
+    <EmbeddedResource Include="forms\frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmItems.resx">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ucInvoiceItem.resx">
+      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ucMenu.resx">
+      <DependentUpon>ucMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
