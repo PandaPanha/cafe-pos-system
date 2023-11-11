@@ -33,20 +33,21 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(475, 243);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(643, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 555);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "frmlogin";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
