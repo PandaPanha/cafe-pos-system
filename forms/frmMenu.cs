@@ -39,5 +39,15 @@ namespace cafe_pos_system.forms
                 btnStaff.Visible = false;
             }
         }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            new frmItems().Show();
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            new frmInvoice().Show();  
+        }
     }
 }
