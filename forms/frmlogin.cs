@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cafe_pos_system.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace cafe_pos_system
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var frmMenu = new frmMenu("Admin");
+            frmMenu.Closed += (s, args) => this.Close();
+            frmMenu.Show();
         }
     }
 }
