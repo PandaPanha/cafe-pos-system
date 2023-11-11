@@ -28,3 +28,5 @@ C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe pos system.csproj.Ge
 C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe pos system.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe pos system.exe
 C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe pos system.pdb
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmMenu.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucMenu.resources
