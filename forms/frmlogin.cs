@@ -20,10 +20,20 @@ namespace cafe_pos_system
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
-            var frmMenu = new frmMenu("Admin");
-            frmMenu.Closed += (s, args) => this.Close();
+            var frmMenu = new frmMenu("Admin", this);
+            frmMenu.Closed += (s, arg) => this.Close();
             frmMenu.Show();
+            
+            
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
