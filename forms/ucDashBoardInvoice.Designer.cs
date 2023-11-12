@@ -29,23 +29,40 @@
         private void InitializeComponent()
         {
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnView = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.SystemColors.Control;
+            this.panel14.Controls.Add(this.button1);
             this.panel14.Controls.Add(this.btnView);
             this.panel14.Controls.Add(this.label13);
             this.panel14.Controls.Add(this.label12);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(663, 44);
+            this.panel14.Size = new System.Drawing.Size(726, 44);
             this.panel14.TabIndex = 2;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnView.FlatAppearance.BorderSize = 0;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(552, 3);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(78, 38);
+            this.btnView.TabIndex = 2;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // label13
             // 
@@ -67,20 +84,19 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "0001";
             // 
-            // btnView
+            // button1
             // 
-            this.btnView.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(582, 3);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(78, 38);
-            this.btnView.TabIndex = 2;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(645, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // ucDashBoardInvoice
             // 
@@ -88,7 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel14);
             this.Name = "ucDashBoardInvoice";
-            this.Size = new System.Drawing.Size(663, 44);
+            this.Size = new System.Drawing.Size(726, 44);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.ResumeLayout(false);
@@ -101,5 +117,6 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
     }
 }
