@@ -42,15 +42,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblStaffofTheYear = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblMostSold = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlStaff = new System.Windows.Forms.Panel();
@@ -58,11 +58,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblProfit = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSoldCup = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ucDashBoardInvoice10 = new cafe_pos_system.forms.ucDashBoardInvoice();
@@ -249,8 +249,8 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.label14);
-            this.panel13.Controls.Add(this.button4);
-            this.panel13.Controls.Add(this.textBox1);
+            this.panel13.Controls.Add(this.btnSearch);
+            this.panel13.Controls.Add(this.txtSearch);
             this.panel13.Controls.Add(this.label5);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
@@ -268,21 +268,21 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "ID:";
             // 
-            // button4
+            // btnSearch
             // 
-            this.button4.Location = new System.Drawing.Point(613, 15);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "search";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(613, 15);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(396, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtSearch.Location = new System.Drawing.Point(396, 15);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(211, 20);
+            this.txtSearch.TabIndex = 1;
             // 
             // label5
             // 
@@ -300,26 +300,26 @@
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.label10);
+            this.panel11.Controls.Add(this.lblStaffofTheYear);
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Location = new System.Drawing.Point(594, 209);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(561, 194);
             this.panel11.TabIndex = 16;
             // 
-            // label10
+            // lblStaffofTheYear
             // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(0, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(559, 157);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Sam Chanpanha";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblStaffofTheYear.BackColor = System.Drawing.Color.White;
+            this.lblStaffofTheYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStaffofTheYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblStaffofTheYear.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffofTheYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblStaffofTheYear.Location = new System.Drawing.Point(0, 35);
+            this.lblStaffofTheYear.Name = "lblStaffofTheYear";
+            this.lblStaffofTheYear.Size = new System.Drawing.Size(559, 157);
+            this.lblStaffofTheYear.TabIndex = 2;
+            this.lblStaffofTheYear.Text = "Mike Oxlong";
+            this.lblStaffofTheYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel12
             // 
@@ -341,7 +341,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(559, 35);
             this.label11.TabIndex = 1;
-            this.label11.Text = "Staff of Year";
+            this.label11.Text = "Staff of the Year";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel9
@@ -349,27 +349,27 @@
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.label8);
+            this.panel9.Controls.Add(this.lblMostSold);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(12, 210);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(576, 302);
             this.panel9.TabIndex = 15;
             // 
-            // label8
+            // lblMostSold
             // 
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label8.Location = new System.Drawing.Point(0, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(574, 265);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Cappuccino";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMostSold.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMostSold.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMostSold.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMostSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMostSold.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostSold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.lblMostSold.Location = new System.Drawing.Point(0, 35);
+            this.lblMostSold.Name = "lblMostSold";
+            this.lblMostSold.Size = new System.Drawing.Size(574, 265);
+            this.lblMostSold.TabIndex = 2;
+            this.lblMostSold.Text = "Cappuccino";
+            this.lblMostSold.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel10
             // 
@@ -446,26 +446,26 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblProfit);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(398, 26);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(371, 176);
             this.panel4.TabIndex = 13;
             // 
-            // label3
+            // lblProfit
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label3.Location = new System.Drawing.Point(0, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(369, 139);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "$382.76";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProfit.BackColor = System.Drawing.Color.White;
+            this.lblProfit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblProfit.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfit.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblProfit.Location = new System.Drawing.Point(0, 35);
+            this.lblProfit.Name = "lblProfit";
+            this.lblProfit.Size = new System.Drawing.Size(369, 139);
+            this.lblProfit.TabIndex = 2;
+            this.lblProfit.Text = "$382.76";
+            this.lblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -495,25 +495,25 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lblSoldCup);
             this.panel3.Controls.Add(this.panel15);
             this.panel3.Location = new System.Drawing.Point(12, 25);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(371, 176);
             this.panel3.TabIndex = 12;
             // 
-            // label2
+            // lblSoldCup
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(369, 139);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "234";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSoldCup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSoldCup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSoldCup.Font = new System.Drawing.Font("Helvetica Rounded", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoldCup.ForeColor = System.Drawing.Color.White;
+            this.lblSoldCup.Location = new System.Drawing.Point(0, 35);
+            this.lblSoldCup.Name = "lblSoldCup";
+            this.lblSoldCup.Size = new System.Drawing.Size(369, 139);
+            this.lblSoldCup.TabIndex = 2;
+            this.lblSoldCup.Text = "234";
+            this.lblSoldCup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel15
             // 
@@ -665,15 +665,15 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblStaffofTheYear;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblMostSold;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlStaff;
@@ -681,11 +681,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblProfit;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSoldCup;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
     }
