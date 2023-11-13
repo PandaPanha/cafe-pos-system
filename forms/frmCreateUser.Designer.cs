@@ -55,7 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -349,19 +349,19 @@
             this.label9.TabIndex = 20;
             this.label9.Text = " ID    :";
             // 
-            // btnAdd
+            // btnCreate
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnAdd.Location = new System.Drawing.Point(745, 551);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(187, 57);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCreate.FlatAppearance.BorderSize = 0;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnCreate.Location = new System.Drawing.Point(640, 470);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(187, 57);
+            this.btnCreate.TabIndex = 5;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
@@ -371,7 +371,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnCancel.Location = new System.Drawing.Point(1012, 551);
+            this.btnCancel.Location = new System.Drawing.Point(1012, 470);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(187, 57);
             this.btnCancel.TabIndex = 6;
@@ -380,7 +380,7 @@
             // 
             // frmCreateUser
             // 
-            this.AcceptButton = this.btnAdd;
+            this.AcceptButton = this.btnCreate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
@@ -388,7 +388,7 @@
             this.ClientSize = new System.Drawing.Size(1238, 661);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cboUserType);
             this.Controls.Add(this.label5);
@@ -431,7 +431,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmail;

@@ -34,10 +34,10 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlLeftSide = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.ucMenu1 = new cafe_pos_system.forms.ucMenu();
             this.ucMenu2 = new cafe_pos_system.forms.ucMenu();
             this.ucMenu3 = new cafe_pos_system.forms.ucMenu();
@@ -98,9 +98,10 @@
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(0, 167);
             this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnDashboard.Size = new System.Drawing.Size(200, 74);
             this.btnDashboard.TabIndex = 7;
-            this.btnDashboard.Text = "      Dashboard";
+            this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Visible = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
@@ -143,6 +144,15 @@
             this.panel1.Size = new System.Drawing.Size(984, 661);
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(711, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(273, 661);
+            this.panel4.TabIndex = 1;
             // 
             // pnlLeftSide
             // 
@@ -199,15 +209,6 @@
             this.flpMenu.Name = "flpMenu";
             this.flpMenu.Size = new System.Drawing.Size(711, 661);
             this.flpMenu.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(711, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 661);
-            this.panel4.TabIndex = 1;
             // 
             // ucMenu1
             // 

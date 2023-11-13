@@ -36,6 +36,18 @@
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.flowLayoutInvoice = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucDashBoardInvoice1 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice2 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice3 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice4 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice5 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice6 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice7 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice8 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice9 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice10 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice11 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.ucDashBoardInvoice12 = new cafe_pos_system.forms.ucDashBoardInvoice();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,20 +76,8 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ucDashBoardInvoice1 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice2 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice3 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice4 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice5 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice6 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice7 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice8 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice9 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice10 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice11 = new cafe_pos_system.forms.ucDashBoardInvoice();
-            this.ucDashBoardInvoice12 = new cafe_pos_system.forms.ucDashBoardInvoice();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -134,7 +134,7 @@
             this.btnStaff.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.White;
             this.btnStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnStaff.Image")));
-            this.btnStaff.Location = new System.Drawing.Point(911, 480);
+            this.btnStaff.Location = new System.Drawing.Point(911, 497);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(245, 61);
             this.btnStaff.TabIndex = 20;
@@ -147,7 +147,7 @@
             this.btnItems.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItems.ForeColor = System.Drawing.Color.White;
             this.btnItems.Image = ((System.Drawing.Image)(resources.GetObject("btnItems.Image")));
-            this.btnItems.Location = new System.Drawing.Point(660, 480);
+            this.btnItems.Location = new System.Drawing.Point(660, 497);
             this.btnItems.Name = "btnItems";
             this.btnItems.Size = new System.Drawing.Size(245, 61);
             this.btnItems.TabIndex = 19;
@@ -161,7 +161,7 @@
             this.btnCreateUser.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateUser.ForeColor = System.Drawing.Color.White;
             this.btnCreateUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateUser.Image")));
-            this.btnCreateUser.Location = new System.Drawing.Point(408, 480);
+            this.btnCreateUser.Location = new System.Drawing.Point(408, 497);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(245, 61);
             this.btnCreateUser.TabIndex = 18;
@@ -176,7 +176,7 @@
             this.panel6.Controls.Add(this.panel13);
             this.panel6.Location = new System.Drawing.Point(411, 138);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(754, 336);
+            this.panel6.Size = new System.Drawing.Size(754, 350);
             this.panel6.TabIndex = 17;
             // 
             // flowLayoutInvoice
@@ -197,12 +197,96 @@
             this.flowLayoutInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutInvoice.Location = new System.Drawing.Point(0, 86);
             this.flowLayoutInvoice.Name = "flowLayoutInvoice";
-            this.flowLayoutInvoice.Size = new System.Drawing.Size(754, 250);
+            this.flowLayoutInvoice.Size = new System.Drawing.Size(754, 264);
             this.flowLayoutInvoice.TabIndex = 2;
+            // 
+            // ucDashBoardInvoice1
+            // 
+            this.ucDashBoardInvoice1.Location = new System.Drawing.Point(3, 3);
+            this.ucDashBoardInvoice1.Name = "ucDashBoardInvoice1";
+            this.ucDashBoardInvoice1.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice1.TabIndex = 0;
+            // 
+            // ucDashBoardInvoice2
+            // 
+            this.ucDashBoardInvoice2.Location = new System.Drawing.Point(3, 53);
+            this.ucDashBoardInvoice2.Name = "ucDashBoardInvoice2";
+            this.ucDashBoardInvoice2.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice2.TabIndex = 1;
+            // 
+            // ucDashBoardInvoice3
+            // 
+            this.ucDashBoardInvoice3.Location = new System.Drawing.Point(3, 103);
+            this.ucDashBoardInvoice3.Name = "ucDashBoardInvoice3";
+            this.ucDashBoardInvoice3.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice3.TabIndex = 2;
+            // 
+            // ucDashBoardInvoice4
+            // 
+            this.ucDashBoardInvoice4.Location = new System.Drawing.Point(3, 153);
+            this.ucDashBoardInvoice4.Name = "ucDashBoardInvoice4";
+            this.ucDashBoardInvoice4.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice4.TabIndex = 3;
+            // 
+            // ucDashBoardInvoice5
+            // 
+            this.ucDashBoardInvoice5.Location = new System.Drawing.Point(3, 203);
+            this.ucDashBoardInvoice5.Name = "ucDashBoardInvoice5";
+            this.ucDashBoardInvoice5.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice5.TabIndex = 4;
+            // 
+            // ucDashBoardInvoice6
+            // 
+            this.ucDashBoardInvoice6.Location = new System.Drawing.Point(3, 253);
+            this.ucDashBoardInvoice6.Name = "ucDashBoardInvoice6";
+            this.ucDashBoardInvoice6.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice6.TabIndex = 5;
+            // 
+            // ucDashBoardInvoice7
+            // 
+            this.ucDashBoardInvoice7.Location = new System.Drawing.Point(3, 303);
+            this.ucDashBoardInvoice7.Name = "ucDashBoardInvoice7";
+            this.ucDashBoardInvoice7.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice7.TabIndex = 6;
+            // 
+            // ucDashBoardInvoice8
+            // 
+            this.ucDashBoardInvoice8.Location = new System.Drawing.Point(3, 353);
+            this.ucDashBoardInvoice8.Name = "ucDashBoardInvoice8";
+            this.ucDashBoardInvoice8.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice8.TabIndex = 7;
+            // 
+            // ucDashBoardInvoice9
+            // 
+            this.ucDashBoardInvoice9.Location = new System.Drawing.Point(3, 403);
+            this.ucDashBoardInvoice9.Name = "ucDashBoardInvoice9";
+            this.ucDashBoardInvoice9.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice9.TabIndex = 8;
+            // 
+            // ucDashBoardInvoice10
+            // 
+            this.ucDashBoardInvoice10.Location = new System.Drawing.Point(3, 453);
+            this.ucDashBoardInvoice10.Name = "ucDashBoardInvoice10";
+            this.ucDashBoardInvoice10.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice10.TabIndex = 9;
+            // 
+            // ucDashBoardInvoice11
+            // 
+            this.ucDashBoardInvoice11.Location = new System.Drawing.Point(3, 503);
+            this.ucDashBoardInvoice11.Name = "ucDashBoardInvoice11";
+            this.ucDashBoardInvoice11.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice11.TabIndex = 10;
+            // 
+            // ucDashBoardInvoice12
+            // 
+            this.ucDashBoardInvoice12.Location = new System.Drawing.Point(3, 553);
+            this.ucDashBoardInvoice12.Name = "ucDashBoardInvoice12";
+            this.ucDashBoardInvoice12.Size = new System.Drawing.Size(726, 44);
+            this.ucDashBoardInvoice12.TabIndex = 11;
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
             this.panel14.Controls.Add(this.label13);
             this.panel14.Controls.Add(this.label12);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
@@ -262,8 +346,10 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(754, 51);
@@ -518,8 +604,20 @@
             this.panel8.Size = new System.Drawing.Size(1184, 68);
             this.panel8.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Helvetica", 32F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
@@ -529,100 +627,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Dashboard";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ucDashBoardInvoice1
-            // 
-            this.ucDashBoardInvoice1.Location = new System.Drawing.Point(3, 3);
-            this.ucDashBoardInvoice1.Name = "ucDashBoardInvoice1";
-            this.ucDashBoardInvoice1.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice1.TabIndex = 0;
-            // 
-            // ucDashBoardInvoice2
-            // 
-            this.ucDashBoardInvoice2.Location = new System.Drawing.Point(3, 53);
-            this.ucDashBoardInvoice2.Name = "ucDashBoardInvoice2";
-            this.ucDashBoardInvoice2.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice2.TabIndex = 1;
-            // 
-            // ucDashBoardInvoice3
-            // 
-            this.ucDashBoardInvoice3.Location = new System.Drawing.Point(3, 103);
-            this.ucDashBoardInvoice3.Name = "ucDashBoardInvoice3";
-            this.ucDashBoardInvoice3.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice3.TabIndex = 2;
-            // 
-            // ucDashBoardInvoice4
-            // 
-            this.ucDashBoardInvoice4.Location = new System.Drawing.Point(3, 153);
-            this.ucDashBoardInvoice4.Name = "ucDashBoardInvoice4";
-            this.ucDashBoardInvoice4.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice4.TabIndex = 3;
-            // 
-            // ucDashBoardInvoice5
-            // 
-            this.ucDashBoardInvoice5.Location = new System.Drawing.Point(3, 203);
-            this.ucDashBoardInvoice5.Name = "ucDashBoardInvoice5";
-            this.ucDashBoardInvoice5.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice5.TabIndex = 4;
-            // 
-            // ucDashBoardInvoice6
-            // 
-            this.ucDashBoardInvoice6.Location = new System.Drawing.Point(3, 253);
-            this.ucDashBoardInvoice6.Name = "ucDashBoardInvoice6";
-            this.ucDashBoardInvoice6.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice6.TabIndex = 5;
-            // 
-            // ucDashBoardInvoice7
-            // 
-            this.ucDashBoardInvoice7.Location = new System.Drawing.Point(3, 303);
-            this.ucDashBoardInvoice7.Name = "ucDashBoardInvoice7";
-            this.ucDashBoardInvoice7.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice7.TabIndex = 6;
-            // 
-            // ucDashBoardInvoice8
-            // 
-            this.ucDashBoardInvoice8.Location = new System.Drawing.Point(3, 353);
-            this.ucDashBoardInvoice8.Name = "ucDashBoardInvoice8";
-            this.ucDashBoardInvoice8.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice8.TabIndex = 7;
-            // 
-            // ucDashBoardInvoice9
-            // 
-            this.ucDashBoardInvoice9.Location = new System.Drawing.Point(3, 403);
-            this.ucDashBoardInvoice9.Name = "ucDashBoardInvoice9";
-            this.ucDashBoardInvoice9.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice9.TabIndex = 8;
-            // 
-            // ucDashBoardInvoice10
-            // 
-            this.ucDashBoardInvoice10.Location = new System.Drawing.Point(3, 453);
-            this.ucDashBoardInvoice10.Name = "ucDashBoardInvoice10";
-            this.ucDashBoardInvoice10.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice10.TabIndex = 9;
-            // 
-            // ucDashBoardInvoice11
-            // 
-            this.ucDashBoardInvoice11.Location = new System.Drawing.Point(3, 503);
-            this.ucDashBoardInvoice11.Name = "ucDashBoardInvoice11";
-            this.ucDashBoardInvoice11.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice11.TabIndex = 10;
-            // 
-            // ucDashBoardInvoice12
-            // 
-            this.ucDashBoardInvoice12.Location = new System.Drawing.Point(3, 553);
-            this.ucDashBoardInvoice12.Name = "ucDashBoardInvoice12";
-            this.ucDashBoardInvoice12.Size = new System.Drawing.Size(726, 44);
-            this.ucDashBoardInvoice12.TabIndex = 11;
             // 
             // frmDashboard
             // 
