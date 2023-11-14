@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\frmCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmCreateUser.Designer.cs">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +82,11 @@
     <Compile Include="forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmStaff.cs">
-      <SubType>Form</SubType>
+    <Compile Include="forms\ucDashBoardInvoice.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\frmStaff.Designer.cs">
-      <DependentUpon>frmStaff.cs</DependentUpon>
+    <Compile Include="forms\ucDashBoardInvoice.Designer.cs">
+      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\ucInvoiceItem.cs">
       <SubType>UserControl</SubType>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\frmCreateUser.resx">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,8 +120,8 @@
     <EmbeddedResource Include="forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmStaff.resx">
-      <DependentUpon>frmStaff.cs</DependentUpon>
+    <EmbeddedResource Include="forms\ucDashBoardInvoice.resx">
+      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ucInvoiceItem.resx">
       <DependentUpon>ucInvoiceItem.cs</DependentUpon>
@@ -132,6 +150,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forms\Images\icons8-add-user-48.png" />
+    <Content Include="forms\Images\icons8-dashboard-50.png" />
+    <Content Include="forms\Images\icons8-delete-48.png" />
+    <Content Include="forms\Images\icons8-food-30.png" />
+    <Content Include="forms\Images\icons8-food-60.png" />
+    <Content Include="forms\Images\icons8-food-bar-50 %281%29.png" />
+    <Content Include="forms\Images\icons8-search-50.png" />
+    <Content Include="forms\Images\icons8-staff-48 %281%29.png" />
+    <Content Include="forms\Images\icons8-view-48.png" />
+    <Content Include="forms\Images\images.jpg" />
+    <Content Include="forms\Images\Java.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

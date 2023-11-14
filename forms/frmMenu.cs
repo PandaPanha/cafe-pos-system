@@ -13,11 +13,12 @@ namespace cafe_pos_system.forms
     public partial class frmMenu : Form
     {
         private string usertype;
-        public frmMenu(string usertype)
+        private frmLogin frmLogin;
+        public frmMenu(string usertype, frmLogin frmLogin)
         {
             InitializeComponent();
             this.usertype = usertype;
-            
+            this.frmLogin = frmLogin;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -32,22 +33,25 @@ namespace cafe_pos_system.forms
         {
             if (usertype == "Admin")
             {
-                btnStaff.Visible = true;
+                btnDashboard.Visible = true;
             }
             else
             {
-                btnStaff.Visible = false;
+                btnDashboard.Visible = false;
             }
         }
 
-        private void btnStaff_Click(object sender, EventArgs e)
+        
+        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            new frmItems().Show();
+
         }
 
-        private void btnInvoice_Click(object sender, EventArgs e)
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new frmInvoice().Show();  
+            new frmDashboard().Show();
         }
     }
 }

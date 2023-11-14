@@ -45,3 +45,11 @@ C:\Users\Dell\Desktop\Cafe\cafe-pos-system\obj\Debug\cafe pos system.pdb
 C:\Users\Dell\Desktop\Cafe\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmItems.resources
 C:\Users\Dell\Desktop\Cafe\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmInvoice.resources
 C:\Users\Dell\Desktop\Cafe\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucInvoiceItem.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmInvoice.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmItems.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmMenu.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucInvoiceItem.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucMenu.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmCreateUser.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmDashboard.resources
+C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucDashBoardInvoice.resources
