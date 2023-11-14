@@ -37,5 +37,10 @@ namespace cafe_pos_system.forms
         {
             new frmItems().Show();
         }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            new frmStaff().Show();
+        }
     }
 }
