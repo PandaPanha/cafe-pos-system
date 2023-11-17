@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 49);
             this.panel1.TabIndex = 0;
@@ -265,7 +265,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(23, 140);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(430, 6);
             this.panel2.TabIndex = 17;
@@ -274,7 +274,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(23, 192);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(430, 6);
             this.panel3.TabIndex = 18;
@@ -327,7 +327,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel4.Location = new System.Drawing.Point(2, 188);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(423, 3);
             this.panel4.TabIndex = 24;
@@ -363,15 +363,15 @@
             this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem7);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 194);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 207);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 320);
             this.flowLayoutPanel1.TabIndex = 27;
             // 
             // ucInvoiceItem8
             // 
             this.ucInvoiceItem8.Location = new System.Drawing.Point(1, 1);
-            this.ucInvoiceItem8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem8.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem8.Name = "ucInvoiceItem8";
             this.ucInvoiceItem8.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem8.TabIndex = 34;
@@ -379,7 +379,7 @@
             // ucInvoiceItem1
             // 
             this.ucInvoiceItem1.Location = new System.Drawing.Point(1, 32);
-            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem1.Name = "ucInvoiceItem1";
             this.ucInvoiceItem1.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem1.TabIndex = 24;
@@ -387,7 +387,7 @@
             // ucInvoiceItem2
             // 
             this.ucInvoiceItem2.Location = new System.Drawing.Point(1, 63);
-            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem2.Name = "ucInvoiceItem2";
             this.ucInvoiceItem2.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem2.TabIndex = 28;
@@ -395,7 +395,7 @@
             // ucInvoiceItem5
             // 
             this.ucInvoiceItem5.Location = new System.Drawing.Point(1, 94);
-            this.ucInvoiceItem5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem5.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem5.Name = "ucInvoiceItem5";
             this.ucInvoiceItem5.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem5.TabIndex = 31;
@@ -403,7 +403,7 @@
             // ucInvoiceItem6
             // 
             this.ucInvoiceItem6.Location = new System.Drawing.Point(1, 125);
-            this.ucInvoiceItem6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem6.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem6.Name = "ucInvoiceItem6";
             this.ucInvoiceItem6.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem6.TabIndex = 32;
@@ -411,7 +411,7 @@
             // ucInvoiceItem7
             // 
             this.ucInvoiceItem7.Location = new System.Drawing.Point(1, 156);
-            this.ucInvoiceItem7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ucInvoiceItem7.Margin = new System.Windows.Forms.Padding(1);
             this.ucInvoiceItem7.Name = "ucInvoiceItem7";
             this.ucInvoiceItem7.Size = new System.Drawing.Size(430, 29);
             this.ucInvoiceItem7.TabIndex = 33;
@@ -423,7 +423,7 @@
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.label22);
             this.panel5.Location = new System.Drawing.Point(23, 151);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(430, 39);
             this.panel5.TabIndex = 0;
@@ -440,8 +440,8 @@
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(23, 410);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Location = new System.Drawing.Point(21, 518);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(432, 127);
             this.panel6.TabIndex = 28;
@@ -450,7 +450,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 577);
+            this.ClientSize = new System.Drawing.Size(486, 656);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -465,7 +465,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInvoice";
             this.Text = "frmInvoice";
             this.panel1.ResumeLayout(false);
