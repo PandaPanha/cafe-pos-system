@@ -38,10 +38,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblInvoiceId = new System.Windows.Forms.Label();
+            this.lblStaffName = new System.Windows.Forms.Label();
+            this.lblInvoiceDate = new System.Windows.Forms.Label();
+            this.lblWaitingNo = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -52,18 +52,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucInvoiceItem8 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem2 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem5 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem6 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem7 = new cafe_pos_system.forms.ucInvoiceItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ucInvoiceItem3 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem2 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,7 +72,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 49);
             this.panel1.TabIndex = 0;
@@ -180,46 +176,46 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Wating No";
             // 
-            // label10
+            // lblInvoiceId
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(123, 75);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
+            this.lblInvoiceId.AutoSize = true;
+            this.lblInvoiceId.Location = new System.Drawing.Point(123, 75);
+            this.lblInvoiceId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvoiceId.Name = "lblInvoiceId";
+            this.lblInvoiceId.Size = new System.Drawing.Size(41, 13);
+            this.lblInvoiceId.TabIndex = 9;
+            this.lblInvoiceId.Text = "label10";
             // 
-            // label11
+            // lblStaffName
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(413, 75);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "label11";
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.Location = new System.Drawing.Point(413, 75);
+            this.lblStaffName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(41, 13);
+            this.lblStaffName.TabIndex = 10;
+            this.lblStaffName.Text = "label11";
             // 
-            // label12
+            // lblInvoiceDate
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(123, 107);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "label12";
+            this.lblInvoiceDate.AutoSize = true;
+            this.lblInvoiceDate.Location = new System.Drawing.Point(123, 107);
+            this.lblInvoiceDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvoiceDate.Name = "lblInvoiceDate";
+            this.lblInvoiceDate.Size = new System.Drawing.Size(41, 13);
+            this.lblInvoiceDate.TabIndex = 11;
+            this.lblInvoiceDate.Text = "label12";
             // 
-            // label13
+            // lblWaitingNo
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(411, 104);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 26);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "15";
+            this.lblWaitingNo.AutoSize = true;
+            this.lblWaitingNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWaitingNo.Location = new System.Drawing.Point(411, 104);
+            this.lblWaitingNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWaitingNo.Name = "lblWaitingNo";
+            this.lblWaitingNo.Size = new System.Drawing.Size(36, 26);
+            this.lblWaitingNo.TabIndex = 12;
+            this.lblWaitingNo.Text = "15";
             // 
             // label14
             // 
@@ -265,16 +261,16 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(23, 140);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 6);
+            this.panel2.Size = new System.Drawing.Size(430, 3);
             this.panel2.TabIndex = 17;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(23, 192);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(430, 6);
             this.panel3.TabIndex = 18;
@@ -323,15 +319,6 @@
             this.label22.TabIndex = 23;
             this.label22.Text = "Amount";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Location = new System.Drawing.Point(2, 188);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(423, 3);
-            this.panel4.TabIndex = 24;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -355,66 +342,15 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem8);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem1);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem3);
             this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem2);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem5);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem6);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem7);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
+            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 194);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 207);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(431, 295);
             this.flowLayoutPanel1.TabIndex = 27;
-            // 
-            // ucInvoiceItem8
-            // 
-            this.ucInvoiceItem8.Location = new System.Drawing.Point(1, 1);
-            this.ucInvoiceItem8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem8.Name = "ucInvoiceItem8";
-            this.ucInvoiceItem8.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem8.TabIndex = 34;
-            // 
-            // ucInvoiceItem1
-            // 
-            this.ucInvoiceItem1.Location = new System.Drawing.Point(1, 32);
-            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem1.Name = "ucInvoiceItem1";
-            this.ucInvoiceItem1.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem1.TabIndex = 24;
-            // 
-            // ucInvoiceItem2
-            // 
-            this.ucInvoiceItem2.Location = new System.Drawing.Point(1, 63);
-            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem2.Name = "ucInvoiceItem2";
-            this.ucInvoiceItem2.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem2.TabIndex = 28;
-            // 
-            // ucInvoiceItem5
-            // 
-            this.ucInvoiceItem5.Location = new System.Drawing.Point(1, 94);
-            this.ucInvoiceItem5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem5.Name = "ucInvoiceItem5";
-            this.ucInvoiceItem5.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem5.TabIndex = 31;
-            // 
-            // ucInvoiceItem6
-            // 
-            this.ucInvoiceItem6.Location = new System.Drawing.Point(1, 125);
-            this.ucInvoiceItem6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem6.Name = "ucInvoiceItem6";
-            this.ucInvoiceItem6.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem6.TabIndex = 32;
-            // 
-            // ucInvoiceItem7
-            // 
-            this.ucInvoiceItem7.Location = new System.Drawing.Point(1, 156);
-            this.ucInvoiceItem7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ucInvoiceItem7.Name = "ucInvoiceItem7";
-            this.ucInvoiceItem7.Size = new System.Drawing.Size(430, 29);
-            this.ucInvoiceItem7.TabIndex = 33;
             // 
             // panel5
             // 
@@ -423,7 +359,7 @@
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.label22);
             this.panel5.Location = new System.Drawing.Point(23, 151);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(430, 39);
             this.panel5.TabIndex = 0;
@@ -440,32 +376,56 @@
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(23, 410);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Location = new System.Drawing.Point(21, 507);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(432, 127);
             this.panel6.TabIndex = 28;
+            // 
+            // ucInvoiceItem3
+            // 
+            this.ucInvoiceItem3.Location = new System.Drawing.Point(2, 2);
+            this.ucInvoiceItem3.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem3.Name = "ucInvoiceItem3";
+            this.ucInvoiceItem3.Size = new System.Drawing.Size(430, 87);
+            this.ucInvoiceItem3.TabIndex = 37;
+            // 
+            // ucInvoiceItem2
+            // 
+            this.ucInvoiceItem2.Location = new System.Drawing.Point(2, 93);
+            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem2.Name = "ucInvoiceItem2";
+            this.ucInvoiceItem2.Size = new System.Drawing.Size(430, 87);
+            this.ucInvoiceItem2.TabIndex = 36;
+            // 
+            // ucInvoiceItem1
+            // 
+            this.ucInvoiceItem1.Location = new System.Drawing.Point(2, 184);
+            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem1.Name = "ucInvoiceItem1";
+            this.ucInvoiceItem1.Size = new System.Drawing.Size(430, 87);
+            this.ucInvoiceItem1.TabIndex = 35;
             // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 577);
+            this.ClientSize = new System.Drawing.Size(486, 645);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblWaitingNo);
+            this.Controls.Add(this.lblInvoiceDate);
+            this.Controls.Add(this.lblStaffName);
+            this.Controls.Add(this.lblInvoiceId);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInvoice";
             this.Text = "frmInvoice";
             this.panel1.ResumeLayout(false);
@@ -492,10 +452,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblInvoiceId;
+        private System.Windows.Forms.Label lblStaffName;
+        private System.Windows.Forms.Label lblInvoiceDate;
+        private System.Windows.Forms.Label lblWaitingNo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -506,17 +466,13 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel5;
-        private ucInvoiceItem ucInvoiceItem1;
-        private ucInvoiceItem ucInvoiceItem2;
-        private ucInvoiceItem ucInvoiceItem5;
-        private ucInvoiceItem ucInvoiceItem6;
-        private ucInvoiceItem ucInvoiceItem7;
-        private ucInvoiceItem ucInvoiceItem8;
         private System.Windows.Forms.Panel panel6;
+        private ucInvoiceItem ucInvoiceItem3;
+        private ucInvoiceItem ucInvoiceItem2;
+        private ucInvoiceItem ucInvoiceItem1;
     }
 }

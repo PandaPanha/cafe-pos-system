@@ -17,16 +17,6 @@ namespace cafe_pos_system.forms
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlStaff_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Click");
-        }
-
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {

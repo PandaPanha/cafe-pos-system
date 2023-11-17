@@ -73,3 +73,22 @@ C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos 
 C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos system.csproj.CoreCompileInputs.cache
 C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos system.exe
 C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos system.pdb
+C:\Users\User\Desktop\New folder\bin\Debug\cafe pos system.exe.config
+C:\Users\User\Desktop\New folder\bin\Debug\cafe pos system.exe
+C:\Users\User\Desktop\New folder\bin\Debug\cafe pos system.pdb
+C:\Users\User\Desktop\New folder\obj\Debug\cafe pos system.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmCreateUser.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmDashboard.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmInvoice.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmItems.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.frmLogin.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmMenu.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.frmStaff.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.ucDashBoardInvoice.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.ucInvoiceItem.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.forms.ucMenu.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe_pos_system.Properties.Resources.resources
+C:\Users\User\Desktop\New folder\obj\Debug\cafe pos system.csproj.GenerateResource.cache
+C:\Users\User\Desktop\New folder\obj\Debug\cafe pos system.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\New folder\obj\Debug\cafe pos system.exe
+C:\Users\User\Desktop\New folder\obj\Debug\cafe pos system.pdb

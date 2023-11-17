@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAccount.cs" />
+    <Compile Include="DB\AccountDB.cs" />
+    <Compile Include="DB\POSCafeDB.cs" />
     <Compile Include="forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +109,10 @@
     <Compile Include="forms\ucMenu.Designer.cs">
       <DependentUpon>ucMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\AccountService.cs" />
     <EmbeddedResource Include="forms\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,5 +178,6 @@
     <Content Include="forms\Images\images.jpg" />
     <Content Include="forms\Images\Java.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
