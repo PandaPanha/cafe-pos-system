@@ -49,6 +49,13 @@
     <Compile Include="Contracts\IAccount.cs" />
     <Compile Include="DB\AccountDB.cs" />
     <Compile Include="DB\POSCafeDB.cs" />
+    <Compile Include="DB\StaffDB.cs" />
+    <Compile Include="forms\frmConfirmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConfirmPayment.Designer.cs">
+      <DependentUpon>frmConfirmPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +120,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\AccountService.cs" />
+    <EmbeddedResource Include="forms\frmConfirmPayment.resx">
+      <DependentUpon>frmConfirmPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </EmbeddedResource>
