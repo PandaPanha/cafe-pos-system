@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace cafe_pos_system.DB
 {
-    public class AccountDB: IAccount
+    public class AccountDB : IAccount, IUser
     {
         private SqlConnection con = POSCafeDB.GetConnection();
 
@@ -27,6 +27,7 @@ namespace cafe_pos_system.DB
             command.CommandType = CommandType.StoredProcedure;
 
             con.Open();
+
             SqlDataReader reader = command.ExecuteReader();
             
             List<Account> accounts = new List<Account>();
@@ -64,6 +65,24 @@ namespace cafe_pos_system.DB
             }
             con.Close();
             return account;
+        }
+
+        public void CreateUser(string staffId, string username, string password, string userType)
+        {
+            string storeProcedureName = "spInsertAccount";
+            SqlCommand command= new SqlCommand(storeProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+            con.Open(); 
+            
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@userType", userType);
+            command.Parameters.AddWithValue("@staffId", staffId);
+
+            command.ExecuteNonQuery();
+
+            con.Close();
+
         }
     }
 }

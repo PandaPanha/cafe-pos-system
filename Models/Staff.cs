@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace cafe_pos_system.Models
 {
+
     public class Staff
     {
         public int StaffId { get; set; }
@@ -21,8 +22,6 @@ namespace cafe_pos_system.Models
         public DateTime HiredDate { get; set; }
         public Boolean StopWork { get; set; }
         public SqlBinary Photo {  get; set; }
-
-
 
     }
 }
