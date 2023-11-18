@@ -19,7 +19,12 @@ namespace cafe_pos_system
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You have Comfirm the order.");
+            DialogResult result = MessageBox.Show("You have Confirm the order");
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
