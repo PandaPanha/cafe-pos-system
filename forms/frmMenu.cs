@@ -53,5 +53,10 @@ namespace cafe_pos_system.forms
         {
             new frmDashboard().Show();
         }
+
+        private void btnCheckin_Click(object sender, EventArgs e)
+        {
+            new frmPayment().Show();
+        }
     }
 }
