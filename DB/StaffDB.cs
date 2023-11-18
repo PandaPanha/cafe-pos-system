@@ -12,9 +12,5 @@ namespace cafe_pos_system.DB
     {
         private SqlConnection con = POSCafeDB.GetConnection();
     }
-   public Staff GetStaffByStaffID(int ID)
-    {
-         throw new NotImplementedException();
-    }
 
 }

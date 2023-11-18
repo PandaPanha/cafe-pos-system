@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAccount.cs" />
+    <Compile Include="Contracts\IStaff.cs" />
+    <Compile Include="Contracts\IUser.cs" />
     <Compile Include="DB\AccountDB.cs" />
     <Compile Include="DB\POSCafeDB.cs" />
+    <Compile Include="DB\StaffDB.cs" />
     <Compile Include="forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,9 +131,11 @@
       <DependentUpon>ucOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\AccountService.cs" />
+    <Compile Include="services\UserService.cs" />
     <EmbeddedResource Include="forms\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </EmbeddedResource>

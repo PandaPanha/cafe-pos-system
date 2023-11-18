@@ -54,10 +54,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem2 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem3 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem4 = new cafe_pos_system.forms.ucInvoiceItem();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -329,22 +332,16 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem1);
+            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem2);
+            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem3);
+            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem4);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 194);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 320);
             this.flowLayoutPanel1.TabIndex = 27;
-            // 
-            // ucInvoiceItem1
-            // 
-            this.ucInvoiceItem1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucInvoiceItem1.Location = new System.Drawing.Point(2, 2);
-            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucInvoiceItem1.Name = "ucInvoiceItem1";
-            this.ucInvoiceItem1.Size = new System.Drawing.Size(430, 81);
-            this.ucInvoiceItem1.TabIndex = 0;
-            this.ucInvoiceItem1.Load += new System.EventHandler(this.ucInvoiceItem1_Load);
             // 
             // panel5
             // 
@@ -386,6 +383,42 @@
             this.label5.Size = new System.Drawing.Size(80, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "GrandTotal";
+            // 
+            // ucInvoiceItem1
+            // 
+            this.ucInvoiceItem1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucInvoiceItem1.Location = new System.Drawing.Point(2, 2);
+            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem1.Name = "ucInvoiceItem1";
+            this.ucInvoiceItem1.Size = new System.Drawing.Size(411, 66);
+            this.ucInvoiceItem1.TabIndex = 0;
+            // 
+            // ucInvoiceItem2
+            // 
+            this.ucInvoiceItem2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucInvoiceItem2.Location = new System.Drawing.Point(2, 72);
+            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem2.Name = "ucInvoiceItem2";
+            this.ucInvoiceItem2.Size = new System.Drawing.Size(411, 66);
+            this.ucInvoiceItem2.TabIndex = 1;
+            // 
+            // ucInvoiceItem3
+            // 
+            this.ucInvoiceItem3.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucInvoiceItem3.Location = new System.Drawing.Point(2, 142);
+            this.ucInvoiceItem3.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem3.Name = "ucInvoiceItem3";
+            this.ucInvoiceItem3.Size = new System.Drawing.Size(411, 66);
+            this.ucInvoiceItem3.TabIndex = 2;
+            // 
+            // ucInvoiceItem4
+            // 
+            this.ucInvoiceItem4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucInvoiceItem4.Location = new System.Drawing.Point(2, 212);
+            this.ucInvoiceItem4.Margin = new System.Windows.Forms.Padding(2);
+            this.ucInvoiceItem4.Name = "ucInvoiceItem4";
+            this.ucInvoiceItem4.Size = new System.Drawing.Size(411, 66);
+            this.ucInvoiceItem4.TabIndex = 3;
             // 
             // frmInvoice
             // 
@@ -451,7 +484,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private ucInvoiceItem ucInvoiceItem1;
         private System.Windows.Forms.Label label5;
+        private ucInvoiceItem ucInvoiceItem1;
+        private ucInvoiceItem ucInvoiceItem2;
+        private ucInvoiceItem ucInvoiceItem3;
+        private ucInvoiceItem ucInvoiceItem4;
     }
 }

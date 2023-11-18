@@ -8,7 +8,8 @@ namespace cafe_pos_system.Contracts
 {
     internal interface IUser
     {
-        void CreateUser(string staffId, string username, string password , string commirmPassword, string userType);
+        void CreateUser(string staffId, string username, string password, string userType);
+
 
     }
 }
