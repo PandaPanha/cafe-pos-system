@@ -29,36 +29,48 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkAddIce = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbCup = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSuger = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbTopping = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbAddIce = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
-            this.panel1.Controls.Add(this.cbAddIce);
+            this.panel1.Controls.Add(this.chkAddIce);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cbCup);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnConfirm);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbSuger);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbTopping);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(533, 349);
             this.panel1.TabIndex = 0;
+            // 
+            // chkAddIce
+            // 
+            this.chkAddIce.AutoSize = true;
+            this.chkAddIce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAddIce.Location = new System.Drawing.Point(204, 233);
+            this.chkAddIce.Name = "chkAddIce";
+            this.chkAddIce.Size = new System.Drawing.Size(112, 30);
+            this.chkAddIce.TabIndex = 9;
+            this.chkAddIce.Text = "Add Ice";
+            this.chkAddIce.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -66,26 +78,27 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(16, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 26);
+            this.label4.Size = new System.Drawing.Size(116, 26);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Cup Size";
+            this.label4.Text = "Cup Size:";
             // 
-            // comboBox2
+            // cbCup
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.ItemHeight = 24;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbCup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cbCup.FormattingEnabled = true;
+            this.cbCup.IntegralHeight = false;
+            this.cbCup.ItemHeight = 24;
+            this.cbCup.Items.AddRange(new object[] {
             "Small",
             "Medium",
             "Large"});
-            this.comboBox2.Location = new System.Drawing.Point(164, 183);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(337, 32);
-            this.comboBox2.TabIndex = 8;
-            this.comboBox2.Text = "Select Suger Level";
+            this.cbCup.Location = new System.Drawing.Point(164, 183);
+            this.cbCup.Name = "cbCup";
+            this.cbCup.Size = new System.Drawing.Size(337, 32);
+            this.cbCup.TabIndex = 8;
+            this.cbCup.Text = "Select Suger Level";
+            this.cbCup.DropDown += new System.EventHandler(this.cbCup_DropDown);
             // 
             // btnCancel
             // 
@@ -115,23 +128,24 @@
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // comboBox1
+            // cbSuger
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 24;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbSuger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSuger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cbSuger.FormattingEnabled = true;
+            this.cbSuger.IntegralHeight = false;
+            this.cbSuger.ItemHeight = 24;
+            this.cbSuger.Items.AddRange(new object[] {
             "25%",
             "50%",
             "75%",
             "100%"});
-            this.comboBox1.Location = new System.Drawing.Point(164, 123);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(337, 32);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "Select Suger Level";
+            this.cbSuger.Location = new System.Drawing.Point(164, 123);
+            this.cbSuger.Name = "cbSuger";
+            this.cbSuger.Size = new System.Drawing.Size(337, 32);
+            this.cbSuger.TabIndex = 4;
+            this.cbSuger.Text = "Select Suger Level";
+            this.cbSuger.DropDown += new System.EventHandler(this.cbSuger_DropDown);
             // 
             // label3
             // 
@@ -161,6 +175,7 @@
             this.cbTopping.Size = new System.Drawing.Size(337, 32);
             this.cbTopping.TabIndex = 2;
             this.cbTopping.Text = "Select a Topping";
+            this.cbTopping.DropDown += new System.EventHandler(this.cbTopping_DropDown);
             // 
             // label2
             // 
@@ -168,9 +183,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(16, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 26);
+            this.label2.Size = new System.Drawing.Size(146, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Suger Level";
+            this.label2.Text = "Suger Level:";
             // 
             // label1
             // 
@@ -178,20 +193,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(14, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 26);
+            this.label1.Size = new System.Drawing.Size(103, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Topping";
-            // 
-            // cbAddIce
-            // 
-            this.cbAddIce.AutoSize = true;
-            this.cbAddIce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAddIce.Location = new System.Drawing.Point(204, 233);
-            this.cbAddIce.Name = "cbAddIce";
-            this.cbAddIce.Size = new System.Drawing.Size(112, 30);
-            this.cbAddIce.TabIndex = 9;
-            this.cbAddIce.Text = "Add Ice";
-            this.cbAddIce.UseVisualStyleBackColor = true;
+            this.label1.Text = "Topping:";
             // 
             // frmSelection
             // 
@@ -214,12 +218,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSuger;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.ComboBox cbTopping;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckBox cbAddIce;
+        private System.Windows.Forms.ComboBox cbCup;
+        private System.Windows.Forms.CheckBox chkAddIce;
     }
 }

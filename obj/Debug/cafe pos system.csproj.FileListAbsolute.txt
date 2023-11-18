@@ -74,3 +74,13 @@ C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos 
 C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos system.exe
 C:\Users\Ung Tivary\OneDrive\ដែសថប\cafe-pos-system\obj\Debug\cafe pos system.pdb
 C:\Users\User\Desktop\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmStaff.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmCreateUser.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmDashboard.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmInvoice.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmItems.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.frmSelection.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmStaff.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucDashBoardInvoice.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucInvoiceItem.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.ucOrder.resources
+C:\Users\HP\Documents\GitHub\cafe-pos-system\obj\Debug\cafe_pos_system.forms.frmPayment.resources

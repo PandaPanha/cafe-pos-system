@@ -26,5 +26,20 @@ namespace cafe_pos_system
         {
             this.Close();
         }
+
+        private void cbTopping_DropDown(object sender, EventArgs e)
+        {
+            this.cbTopping.ForeColor = Color.Black;
+        }
+
+        private void cbSuger_DropDown(object sender, EventArgs e)
+        {
+            this.cbSuger.ForeColor = Color.Black;
+        }
+
+        private void cbCup_DropDown(object sender, EventArgs e)
+        {
+            this.cbCup.ForeColor = Color.Black;
+        }
     }
 }

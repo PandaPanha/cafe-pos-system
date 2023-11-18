@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace cafe_pos_system.forms
 {
-    public partial class frmInvoice : Form
+    public partial class ucOrder : UserControl
     {
-        public frmInvoice()
+        public ucOrder()
         {
             InitializeComponent();
-        }
-
-        private void ucInvoiceItem1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
