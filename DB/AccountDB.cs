@@ -84,5 +84,20 @@ namespace cafe_pos_system.DB
             con.Close();
 
         }
+
+        public void InsertAccount(Account account)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateAccount(Account account)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteAccountById(int accountId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
