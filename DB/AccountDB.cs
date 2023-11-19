@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace cafe_pos_system.DB
 {
-    public class AccountDB : IAccount, IUser
+    public class AccountDB : IAccount
     {
         private SqlConnection con = POSCafeDB.GetConnection();
 
