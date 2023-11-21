@@ -17,6 +17,9 @@ namespace cafe_pos_system.forms
             InitializeComponent();
         }
 
-      
+        private void ucInvoiceItem1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

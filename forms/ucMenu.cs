@@ -12,7 +12,7 @@ namespace cafe_pos_system.forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello!");
+            new frmSelection().ShowDialog();
         }
     }
 }
