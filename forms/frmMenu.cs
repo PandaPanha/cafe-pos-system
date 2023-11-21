@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cafe_pos_system.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,15 @@ namespace cafe_pos_system.forms
 {
     public partial class frmMenu : Form
     {
-        private string usertype;
+        private Account CurrentUser = new Account();
         private frmLogin frmLogin;
-        public frmMenu(string usertype, frmLogin frmLogin)
+        public frmMenu(int accountId, string usertype, frmLogin frmLogin)
         {
             InitializeComponent();
-            this.usertype = usertype;
+            this.CurrentUser.Id = accountId;
+            this.CurrentUser.UserType = usertype;
             this.frmLogin = frmLogin;
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -31,7 +34,7 @@ namespace cafe_pos_system.forms
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            if (usertype == "Admin")
+            if (CurrentUser.UserType == "Admin")
             {
                 btnDashboard.Visible = true;
             }
@@ -51,7 +54,7 @@ namespace cafe_pos_system.forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new frmDashboard().Show();
+            new frmDashboard().ShowDialog();
         }
 
         private void btnCheckin_Click(object sender, EventArgs e)

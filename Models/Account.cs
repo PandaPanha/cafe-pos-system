@@ -13,6 +13,7 @@ namespace cafe_pos_system.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string UserType { get; set; }
+        public int StaffId { get; set; }
 
         public Boolean IsValidAccount()
         {

@@ -47,6 +47,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.txtSoldQty = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbItem)).BeginInit();
             this.SuspendLayout();
@@ -204,10 +206,11 @@
             this.btnUpload.Location = new System.Drawing.Point(32, 211);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(221, 39);
+            this.btnUpload.Size = new System.Drawing.Size(212, 39);
             this.btnUpload.TabIndex = 17;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // pbItem
             // 
@@ -216,7 +219,8 @@
             this.pbItem.Location = new System.Drawing.Point(32, 11);
             this.pbItem.Margin = new System.Windows.Forms.Padding(2);
             this.pbItem.Name = "pbItem";
-            this.pbItem.Size = new System.Drawing.Size(221, 196);
+            this.pbItem.Size = new System.Drawing.Size(212, 196);
+            this.pbItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbItem.TabIndex = 18;
             this.pbItem.TabStop = false;
             // 
@@ -254,11 +258,35 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // txtSoldQty
+            // 
+            this.txtSoldQty.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSoldQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoldQty.Location = new System.Drawing.Point(385, 162);
+            this.txtSoldQty.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSoldQty.Name = "txtSoldQty";
+            this.txtSoldQty.Size = new System.Drawing.Size(299, 23);
+            this.txtSoldQty.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(276, 168);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "SoldQty";
+            // 
             // frmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.txtSoldQty);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox1);
@@ -306,5 +334,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtSoldQty;
+        private System.Windows.Forms.Label label2;
     }
 }

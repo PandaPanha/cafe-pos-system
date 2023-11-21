@@ -13,7 +13,7 @@ namespace cafe_pos_system.Models
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int SoldQty { get; set; }
-        public Image picture { get; set; }
+        public Image Picture { get; set; }
 
     }
 }

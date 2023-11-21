@@ -12,13 +12,16 @@ namespace cafe_pos_system.services
 {
     public class AccountService : IAccount
     {
-        AccountDB accountDB = new AccountDB();
+        private AccountDB accountDB = new AccountDB();
 
-        
+        public void DeleteAccountById(int accountId)
+        {
+            accountDB.DeleteAccountById(accountId);
+        }
 
         public Account GetAccountByStaffId(int staffId)
         {
-            throw new NotImplementedException();
+            return accountDB.GetAccountByStaffId(staffId);
         }
 
         public List<Account> GetAllAccount()
@@ -30,6 +33,16 @@ namespace cafe_pos_system.services
         {
             return accountDB.GetUserCredentials(username, password);
 
+        }
+
+        public void InsertAccount(Account account)
+        {
+            accountDB.InsertAccount(account);
+        }
+
+        public void UpdateAccount(Account account)
+        {
+            accountDB.UpdateAccount(account);
         }
     }
 }

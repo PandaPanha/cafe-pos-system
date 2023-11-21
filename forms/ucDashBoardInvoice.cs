@@ -19,7 +19,7 @@ namespace cafe_pos_system.forms
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            new frmInvoice().Show();
+            new frmInvoice().ShowDialog();
         }
     }
 }
