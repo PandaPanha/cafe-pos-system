@@ -1,6 +1,6 @@
 ﻿namespace cafe_pos_system.forms
 {
-    partial class ucMenu
+    partial class UCMenu
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCMenu));
             this.pbProduct = new System.Windows.Forms.PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbPrice = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbProduct
@@ -42,23 +44,23 @@
             this.pbProduct.Image = ((System.Drawing.Image)(resources.GetObject("pbProduct.Image")));
             this.pbProduct.Location = new System.Drawing.Point(13, 12);
             this.pbProduct.Name = "pbProduct";
-            this.pbProduct.Size = new System.Drawing.Size(199, 133);
+            this.pbProduct.Size = new System.Drawing.Size(199, 147);
             this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProduct.TabIndex = 0;
             this.pbProduct.TabStop = false;
             // 
             // lbName
             // 
-            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbName.AutoSize = true;
+            this.lbName.AutoEllipsis = true;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.lbName.Location = new System.Drawing.Point(58, 162);
+            this.lbName.Location = new System.Drawing.Point(0, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(111, 20);
+            this.lbName.Size = new System.Drawing.Size(199, 31);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Hot Chocolate";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAdd
             // 
@@ -78,7 +80,7 @@
             // 
             this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.AutoSize = true;
-            this.lbPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(86)))), ((int)(((byte)(60)))));
+            this.lbPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
             this.lbPrice.Location = new System.Drawing.Point(157, 12);
@@ -87,17 +89,27 @@
             this.lbPrice.TabIndex = 2;
             this.lbPrice.Text = "$3.00";
             // 
-            // ucMenu
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbName);
+            this.panel1.Location = new System.Drawing.Point(13, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(199, 31);
+            this.panel1.TabIndex = 4;
+            // 
+            // UCMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lbPrice);
-            this.Controls.Add(this.lbName);
             this.Controls.Add(this.pbProduct);
-            this.Name = "ucMenu";
+            this.Name = "UCMenu";
             this.Size = new System.Drawing.Size(223, 259);
+            this.Load += new System.EventHandler(this.ucMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Panel panel1;
     }
 }

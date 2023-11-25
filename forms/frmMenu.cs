@@ -1,4 +1,5 @@
 ﻿using cafe_pos_system.Models;
+using cafe_pos_system.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace cafe_pos_system.forms
     {
         private Account CurrentUser = new Account();
         private frmLogin frmLogin;
+        private List<Item> items = new ItemService().GetItem();
+
         public frmMenu(int accountId, string usertype, frmLogin frmLogin)
         {
             InitializeComponent();
@@ -42,6 +45,13 @@ namespace cafe_pos_system.forms
             {
                 btnDashboard.Visible = false;
             }
+            foreach(Item item in items)
+            {
+                UCMenu ucMenu = new UCMenu(item);
+                flpMenu.Controls.Add(ucMenu);
+            }
+
+
         }
 
         

@@ -108,29 +108,29 @@
     <Compile Include="forms\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucDashBoardInvoice.cs">
+    <Compile Include="forms\UCDashBoardInvoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucDashBoardInvoice.Designer.cs">
-      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
+    <Compile Include="forms\UCDashBoardInvoice.Designer.cs">
+      <DependentUpon>UCDashBoardInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucInvoiceItem.cs">
+    <Compile Include="forms\UCInvoiceItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucInvoiceItem.designer.cs">
-      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    <Compile Include="forms\UCInvoiceItem.designer.cs">
+      <DependentUpon>UCInvoiceItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucMenu.cs">
+    <Compile Include="forms\UCMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucMenu.Designer.cs">
-      <DependentUpon>ucMenu.cs</DependentUpon>
+    <Compile Include="forms\UCMenu.Designer.cs">
+      <DependentUpon>UCMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucOrder.cs">
+    <Compile Include="forms\UCOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucOrder.Designer.cs">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <Compile Include="forms\UCOrder.Designer.cs">
+      <DependentUpon>UCOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -172,17 +172,17 @@
     <EmbeddedResource Include="forms\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucDashBoardInvoice.resx">
-      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCDashBoardInvoice.resx">
+      <DependentUpon>UCDashBoardInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucInvoiceItem.resx">
-      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCInvoiceItem.resx">
+      <DependentUpon>UCInvoiceItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucMenu.resx">
-      <DependentUpon>ucMenu.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCMenu.resx">
+      <DependentUpon>UCMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucOrder.resx">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCOrder.resx">
+      <DependentUpon>UCOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

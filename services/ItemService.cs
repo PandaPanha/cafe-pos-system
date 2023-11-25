@@ -14,27 +14,27 @@ namespace cafe_pos_system.services
         private ItemDB itemDB = new ItemDB();
         public void DeleteItemById(int id)
         {
-            throw new NotImplementedException();
+            itemDB.DeleteItemById(id);
         }
 
         public Item GetByItemById(int id)
         {
-            throw new NotImplementedException();
+            return itemDB.GetByItemById(id);
         }
 
         public List<Item> GetItem()
         {
-            throw new NotImplementedException();
+            return itemDB.GetItem();
         }
 
         public void InsertItem(Item item)
         {
-            throw new NotImplementedException();
+            itemDB.InsertItem(item);
         }
 
         public void UpdateItem(Item item)
         {
-            throw new NotImplementedException();
+            itemDB.UpdateItem(item);
         }
     }
 }

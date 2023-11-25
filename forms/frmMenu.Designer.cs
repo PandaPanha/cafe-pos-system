@@ -37,44 +37,17 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlMiddle = new System.Windows.Forms.Panel();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucMenu1 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu2 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu3 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu4 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu5 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu6 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu7 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu8 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu9 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu10 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu11 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu12 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu13 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu14 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu15 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu16 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu17 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu18 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu19 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu20 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu21 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu22 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu23 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu24 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu25 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu26 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu27 = new cafe_pos_system.forms.ucMenu();
-            this.ucMenu28 = new cafe_pos_system.forms.ucMenu();
+            
             this.pnlRightSide = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucOrder1 = new cafe_pos_system.forms.ucOrder();
-            this.ucOrder2 = new cafe_pos_system.forms.ucOrder();
-            this.ucOrder3 = new cafe_pos_system.forms.ucOrder();
-            this.ucOrder4 = new cafe_pos_system.forms.ucOrder();
+            this.ucOrder1 = new cafe_pos_system.forms.UCOrder();
+            this.ucOrder2 = new cafe_pos_system.forms.UCOrder();
+            this.ucOrder3 = new cafe_pos_system.forms.UCOrder();
+            this.ucOrder4 = new cafe_pos_system.forms.UCOrder();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -193,263 +166,12 @@
             // 
             this.flpMenu.AutoScroll = true;
             this.flpMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.flpMenu.Controls.Add(this.ucMenu1);
-            this.flpMenu.Controls.Add(this.ucMenu2);
-            this.flpMenu.Controls.Add(this.ucMenu3);
-            this.flpMenu.Controls.Add(this.ucMenu4);
-            this.flpMenu.Controls.Add(this.ucMenu5);
-            this.flpMenu.Controls.Add(this.ucMenu6);
-            this.flpMenu.Controls.Add(this.ucMenu7);
-            this.flpMenu.Controls.Add(this.ucMenu8);
-            this.flpMenu.Controls.Add(this.ucMenu9);
-            this.flpMenu.Controls.Add(this.ucMenu10);
-            this.flpMenu.Controls.Add(this.ucMenu11);
-            this.flpMenu.Controls.Add(this.ucMenu12);
-            this.flpMenu.Controls.Add(this.ucMenu13);
-            this.flpMenu.Controls.Add(this.ucMenu14);
-            this.flpMenu.Controls.Add(this.ucMenu15);
-            this.flpMenu.Controls.Add(this.ucMenu16);
-            this.flpMenu.Controls.Add(this.ucMenu17);
-            this.flpMenu.Controls.Add(this.ucMenu18);
-            this.flpMenu.Controls.Add(this.ucMenu19);
-            this.flpMenu.Controls.Add(this.ucMenu20);
-            this.flpMenu.Controls.Add(this.ucMenu21);
-            this.flpMenu.Controls.Add(this.ucMenu22);
-            this.flpMenu.Controls.Add(this.ucMenu23);
-            this.flpMenu.Controls.Add(this.ucMenu24);
-            this.flpMenu.Controls.Add(this.ucMenu25);
-            this.flpMenu.Controls.Add(this.ucMenu26);
-            this.flpMenu.Controls.Add(this.ucMenu27);
-            this.flpMenu.Controls.Add(this.ucMenu28);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpMenu.Location = new System.Drawing.Point(0, 0);
             this.flpMenu.Name = "flpMenu";
             this.flpMenu.Size = new System.Drawing.Size(807, 695);
             this.flpMenu.TabIndex = 12;
-            // 
-            // ucMenu1
-            // 
-            this.ucMenu1.Location = new System.Drawing.Point(4, 5);
-            this.ucMenu1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu1.Name = "ucMenu1";
-            this.ucMenu1.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu1.TabIndex = 0;
-            // 
-            // ucMenu2
-            // 
-            this.ucMenu2.Location = new System.Drawing.Point(235, 5);
-            this.ucMenu2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu2.Name = "ucMenu2";
-            this.ucMenu2.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu2.TabIndex = 1;
-            // 
-            // ucMenu3
-            // 
-            this.ucMenu3.Location = new System.Drawing.Point(466, 5);
-            this.ucMenu3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu3.Name = "ucMenu3";
-            this.ucMenu3.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu3.TabIndex = 2;
-            // 
-            // ucMenu4
-            // 
-            this.ucMenu4.Location = new System.Drawing.Point(4, 274);
-            this.ucMenu4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu4.Name = "ucMenu4";
-            this.ucMenu4.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu4.TabIndex = 3;
-            // 
-            // ucMenu5
-            // 
-            this.ucMenu5.Location = new System.Drawing.Point(235, 274);
-            this.ucMenu5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu5.Name = "ucMenu5";
-            this.ucMenu5.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu5.TabIndex = 4;
-            // 
-            // ucMenu6
-            // 
-            this.ucMenu6.Location = new System.Drawing.Point(466, 274);
-            this.ucMenu6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu6.Name = "ucMenu6";
-            this.ucMenu6.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu6.TabIndex = 5;
-            // 
-            // ucMenu7
-            // 
-            this.ucMenu7.Location = new System.Drawing.Point(4, 543);
-            this.ucMenu7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu7.Name = "ucMenu7";
-            this.ucMenu7.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu7.TabIndex = 6;
-            // 
-            // ucMenu8
-            // 
-            this.ucMenu8.Location = new System.Drawing.Point(235, 543);
-            this.ucMenu8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu8.Name = "ucMenu8";
-            this.ucMenu8.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu8.TabIndex = 7;
-            // 
-            // ucMenu9
-            // 
-            this.ucMenu9.Location = new System.Drawing.Point(466, 543);
-            this.ucMenu9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu9.Name = "ucMenu9";
-            this.ucMenu9.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu9.TabIndex = 8;
-            // 
-            // ucMenu10
-            // 
-            this.ucMenu10.Location = new System.Drawing.Point(4, 812);
-            this.ucMenu10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu10.Name = "ucMenu10";
-            this.ucMenu10.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu10.TabIndex = 9;
-            // 
-            // ucMenu11
-            // 
-            this.ucMenu11.Location = new System.Drawing.Point(235, 812);
-            this.ucMenu11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu11.Name = "ucMenu11";
-            this.ucMenu11.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu11.TabIndex = 10;
-            // 
-            // ucMenu12
-            // 
-            this.ucMenu12.Location = new System.Drawing.Point(466, 812);
-            this.ucMenu12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu12.Name = "ucMenu12";
-            this.ucMenu12.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu12.TabIndex = 11;
-            // 
-            // ucMenu13
-            // 
-            this.ucMenu13.Location = new System.Drawing.Point(4, 1081);
-            this.ucMenu13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu13.Name = "ucMenu13";
-            this.ucMenu13.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu13.TabIndex = 12;
-            // 
-            // ucMenu14
-            // 
-            this.ucMenu14.Location = new System.Drawing.Point(235, 1081);
-            this.ucMenu14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu14.Name = "ucMenu14";
-            this.ucMenu14.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu14.TabIndex = 13;
-            // 
-            // ucMenu15
-            // 
-            this.ucMenu15.Location = new System.Drawing.Point(466, 1081);
-            this.ucMenu15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu15.Name = "ucMenu15";
-            this.ucMenu15.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu15.TabIndex = 14;
-            // 
-            // ucMenu16
-            // 
-            this.ucMenu16.Location = new System.Drawing.Point(4, 1350);
-            this.ucMenu16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu16.Name = "ucMenu16";
-            this.ucMenu16.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu16.TabIndex = 15;
-            // 
-            // ucMenu17
-            // 
-            this.ucMenu17.Location = new System.Drawing.Point(235, 1350);
-            this.ucMenu17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu17.Name = "ucMenu17";
-            this.ucMenu17.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu17.TabIndex = 16;
-            // 
-            // ucMenu18
-            // 
-            this.ucMenu18.Location = new System.Drawing.Point(466, 1350);
-            this.ucMenu18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu18.Name = "ucMenu18";
-            this.ucMenu18.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu18.TabIndex = 17;
-            // 
-            // ucMenu19
-            // 
-            this.ucMenu19.Location = new System.Drawing.Point(4, 1619);
-            this.ucMenu19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu19.Name = "ucMenu19";
-            this.ucMenu19.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu19.TabIndex = 18;
-            // 
-            // ucMenu20
-            // 
-            this.ucMenu20.Location = new System.Drawing.Point(235, 1619);
-            this.ucMenu20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu20.Name = "ucMenu20";
-            this.ucMenu20.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu20.TabIndex = 19;
-            // 
-            // ucMenu21
-            // 
-            this.ucMenu21.Location = new System.Drawing.Point(466, 1619);
-            this.ucMenu21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu21.Name = "ucMenu21";
-            this.ucMenu21.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu21.TabIndex = 20;
-            // 
-            // ucMenu22
-            // 
-            this.ucMenu22.Location = new System.Drawing.Point(4, 1888);
-            this.ucMenu22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu22.Name = "ucMenu22";
-            this.ucMenu22.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu22.TabIndex = 21;
-            // 
-            // ucMenu23
-            // 
-            this.ucMenu23.Location = new System.Drawing.Point(235, 1888);
-            this.ucMenu23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu23.Name = "ucMenu23";
-            this.ucMenu23.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu23.TabIndex = 22;
-            // 
-            // ucMenu24
-            // 
-            this.ucMenu24.Location = new System.Drawing.Point(466, 1888);
-            this.ucMenu24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu24.Name = "ucMenu24";
-            this.ucMenu24.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu24.TabIndex = 23;
-            // 
-            // ucMenu25
-            // 
-            this.ucMenu25.Location = new System.Drawing.Point(4, 2157);
-            this.ucMenu25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu25.Name = "ucMenu25";
-            this.ucMenu25.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu25.TabIndex = 24;
-            // 
-            // ucMenu26
-            // 
-            this.ucMenu26.Location = new System.Drawing.Point(235, 2157);
-            this.ucMenu26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu26.Name = "ucMenu26";
-            this.ucMenu26.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu26.TabIndex = 25;
-            // 
-            // ucMenu27
-            // 
-            this.ucMenu27.Location = new System.Drawing.Point(466, 2157);
-            this.ucMenu27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu27.Name = "ucMenu27";
-            this.ucMenu27.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu27.TabIndex = 26;
-            // 
-            // ucMenu28
-            // 
-            this.ucMenu28.Location = new System.Drawing.Point(4, 2426);
-            this.ucMenu28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucMenu28.Name = "ucMenu28";
-            this.ucMenu28.Size = new System.Drawing.Size(223, 259);
-            this.ucMenu28.TabIndex = 27;
+            
             // 
             // pnlRightSide
             // 
@@ -511,44 +233,12 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.ucOrder1);
-            this.flowLayoutPanel1.Controls.Add(this.ucOrder2);
-            this.flowLayoutPanel1.Controls.Add(this.ucOrder3);
-            this.flowLayoutPanel1.Controls.Add(this.ucOrder4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(549, 376);
             this.flowLayoutPanel1.TabIndex = 36;
-            // 
-            // ucOrder1
-            // 
-            this.ucOrder1.Location = new System.Drawing.Point(3, 3);
-            this.ucOrder1.Name = "ucOrder1";
-            this.ucOrder1.Size = new System.Drawing.Size(528, 71);
-            this.ucOrder1.TabIndex = 0;
-            // 
-            // ucOrder2
-            // 
-            this.ucOrder2.Location = new System.Drawing.Point(3, 80);
-            this.ucOrder2.Name = "ucOrder2";
-            this.ucOrder2.Size = new System.Drawing.Size(528, 71);
-            this.ucOrder2.TabIndex = 1;
-            // 
-            // ucOrder3
-            // 
-            this.ucOrder3.Location = new System.Drawing.Point(3, 157);
-            this.ucOrder3.Name = "ucOrder3";
-            this.ucOrder3.Size = new System.Drawing.Size(528, 71);
-            this.ucOrder3.TabIndex = 2;
-            // 
-            // ucOrder4
-            // 
-            this.ucOrder4.Location = new System.Drawing.Point(3, 234);
-            this.ucOrder4.Name = "ucOrder4";
-            this.ucOrder4.Size = new System.Drawing.Size(528, 71);
-            this.ucOrder4.TabIndex = 3;
             // 
             // panel5
             // 
@@ -717,34 +407,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel pnlMiddle;
         private System.Windows.Forms.FlowLayoutPanel flpMenu;
-        private ucMenu ucMenu1;
-        private ucMenu ucMenu2;
-        private ucMenu ucMenu3;
-        private ucMenu ucMenu4;
-        private ucMenu ucMenu5;
-        private ucMenu ucMenu6;
-        private ucMenu ucMenu7;
-        private ucMenu ucMenu8;
-        private ucMenu ucMenu9;
-        private ucMenu ucMenu10;
-        private ucMenu ucMenu11;
-        private ucMenu ucMenu12;
-        private ucMenu ucMenu13;
-        private ucMenu ucMenu14;
-        private ucMenu ucMenu15;
-        private ucMenu ucMenu16;
-        private ucMenu ucMenu17;
-        private ucMenu ucMenu18;
-        private ucMenu ucMenu19;
-        private ucMenu ucMenu20;
-        private ucMenu ucMenu21;
-        private ucMenu ucMenu22;
-        private ucMenu ucMenu23;
-        private ucMenu ucMenu24;
-        private ucMenu ucMenu25;
-        private ucMenu ucMenu26;
-        private ucMenu ucMenu27;
-        private ucMenu ucMenu28;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnCheckin;
@@ -754,9 +416,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private ucOrder ucOrder1;
-        private ucOrder ucOrder2;
-        private ucOrder ucOrder3;
-        private ucOrder ucOrder4;
+        private UCOrder ucOrder1;
+        private UCOrder ucOrder2;
+        private UCOrder ucOrder3;
+        private UCOrder ucOrder4;
     }
 }

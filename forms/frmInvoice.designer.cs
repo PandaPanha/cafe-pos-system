@@ -57,10 +57,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem2 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem3 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem4 = new cafe_pos_system.forms.ucInvoiceItem();
+            this.ucInvoiceItem1 = new cafe_pos_system.forms.UCInvoiceItem();
+            this.ucInvoiceItem2 = new cafe_pos_system.forms.UCInvoiceItem();
+            this.ucInvoiceItem3 = new cafe_pos_system.forms.UCInvoiceItem();
+            this.ucInvoiceItem4 = new cafe_pos_system.forms.UCInvoiceItem();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -485,9 +485,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-        private ucInvoiceItem ucInvoiceItem1;
-        private ucInvoiceItem ucInvoiceItem2;
-        private ucInvoiceItem ucInvoiceItem3;
-        private ucInvoiceItem ucInvoiceItem4;
+        private UCInvoiceItem ucInvoiceItem1;
+        private UCInvoiceItem ucInvoiceItem2;
+        private UCInvoiceItem ucInvoiceItem3;
+        private UCInvoiceItem ucInvoiceItem4;
     }
 }

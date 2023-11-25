@@ -164,6 +164,7 @@ namespace cafe_pos_system.services
                 return false;
             }
             return true;
+
         }
 
         public static bool IsDecimal(TextBox txtB)

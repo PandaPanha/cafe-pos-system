@@ -1,6 +1,6 @@
 ﻿namespace cafe_pos_system.forms
 {
-    partial class ucInvoiceItem
+    partial class UCInvoiceItem
     {
         /// <summary> 
         /// Required designer variable.

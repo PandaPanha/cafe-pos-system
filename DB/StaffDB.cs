@@ -50,13 +50,13 @@ namespace cafe_pos_system.DB
                 staff.Id = int.Parse(reader["staffId"].ToString());
                 staff.Name = reader["staffName"].ToString();
                 staff.Gender = reader["gender"].ToString();
-                staff.BirthDate = reader["birthDate"].ToString();
+                staff.BirthDate = DateTime.Parse(reader["birthDate"].ToString()).ToShortDateString();
                 staff.Salary = decimal.Parse(reader["salary"].ToString());
                 staff.Position = reader["position"].ToString();
                 staff.Email = reader["email"].ToString();
                 staff.Phone = reader["phone"].ToString();
                 staff.Address = reader["address"].ToString();
-                staff.HiredDate = reader["hiredDate"].ToString();
+                staff.HiredDate = DateTime.Parse(reader["hiredDate"].ToString()).ToShortDateString();
                 staff.StopWork = Boolean.Parse(reader["stopWork"].ToString());
                 staff.Photo = PictureService.ConvertBinaryToImg((byte[])reader["photo"]);
                 staffs.Add(staff);  
@@ -82,13 +82,13 @@ namespace cafe_pos_system.DB
                 staff.Id = int.Parse(reader["staffId"].ToString());
                 staff.Name = reader["staffName"].ToString();
                 staff.Gender = reader["gender"].ToString();
-                staff.BirthDate = reader["birthDate"].ToString();
+                staff.BirthDate = DateTime.Parse(reader["birthDate"].ToString()).ToShortDateString();
                 staff.Salary = decimal.Parse(reader["salary"].ToString());
                 staff.Position = reader["position"].ToString();
                 staff.Email = reader["email"].ToString();
                 staff.Phone = reader["phone"].ToString();
                 staff.Address = reader["address"].ToString();
-                staff.HiredDate = reader["hiredDate"].ToString();
+                staff.HiredDate = DateTime.Parse(reader["hiredDate"].ToString()).ToShortDateString();
                 staff.StopWork = Boolean.Parse(reader["stopWork"].ToString());
                 staff.Photo = new Bitmap(PictureService.ConvertBinaryToImg((byte[])reader["photo"]));
                 

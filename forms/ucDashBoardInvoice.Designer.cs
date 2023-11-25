@@ -1,6 +1,6 @@
 ﻿namespace cafe_pos_system.forms
 {
-    partial class ucDashBoardInvoice
+    partial class UCDashBoardInvoice
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDashBoardInvoice));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDashBoardInvoice));
             this.panel14 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();

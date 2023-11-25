@@ -55,6 +55,7 @@ namespace cafe_pos_system.DB
                 account.Username = reader["username"].ToString();
                 account.Password = reader["password"].ToString();
                 account.UserType = reader["userType"].ToString();
+                account.StaffId = int.Parse(reader["staffId"].ToString());
                 accounts.Add(account);
             }
             con.Close();
@@ -108,7 +109,6 @@ namespace cafe_pos_system.DB
             SqlCommand command = new SqlCommand(storeProcedureName, con);
             command.CommandType = CommandType.StoredProcedure;
             con.Open();
-            command.Parameters.AddWithValue("@accountId", account.Id);
             command.Parameters.AddWithValue("@username", account.Username);
             command.Parameters.AddWithValue("@password", account.Password);
             command.Parameters.AddWithValue("@userType", account.UserType);
