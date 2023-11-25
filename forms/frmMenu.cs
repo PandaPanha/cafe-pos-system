@@ -16,7 +16,39 @@ namespace cafe_pos_system.forms
     {
         private Account CurrentUser = new Account();
         private frmLogin frmLogin;
-        private List<Item> items = new ItemService().GetItem();
+        private List<Item> items;
+        public decimal SubTotal { get; set; }
+        public decimal Discount { get; set; }
+        public decimal GrandTotal { get; set; }
+        public decimal ChangeMoney { get; set; }
+
+        public void OutputTotal()
+        {
+            try
+            {
+                // Parse the discount value from the text box input. If the text box is empty, default the discount to 0.
+                Discount = decimal.Parse(txtDiscount.Text == "" ? "0" : txtDiscount.Text);
+
+                // Calculate the GrandTotal by subtracting the discount from the SubTotal.
+                // The discount is represented as a percentage of the SubTotal.
+                GrandTotal = SubTotal - (SubTotal * (Discount / 100));
+
+                // Parse the received amount from the text box input. If empty, default the amount to 0.
+                decimal receivedAmount = decimal.Parse(txtRecieve.Text == "" ? "0" : txtRecieve.Text);
+
+                // Calculate the ChangeMoney by subtracting the GrandTotal from the received amount.
+                ChangeMoney = receivedAmount - GrandTotal;
+
+                lblGrandTotal.Text = GrandTotal.ToString("$0.00");
+                lblSubtotal.Text = SubTotal.ToString("$0.00");
+                lblChangedMoney.Text = ChangeMoney.ToString("$0.00");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message+"\nPlease input digits and correct punctuation", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
 
         public frmMenu(int accountId, string usertype, frmLogin frmLogin)
         {
@@ -29,10 +61,14 @@ namespace cafe_pos_system.forms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var frmLogin = new frmLogin();
-            frmLogin.Closed += (s, args) => this.Close();
-            frmLogin.Show();
+            DialogResult result = MessageBox.Show("Are you sure want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
+            {
+                this.Hide();
+                var frmLogin = new frmLogin();
+                frmLogin.Closed += (s, args) => this.Close();
+                frmLogin.Show();
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
@@ -45,31 +81,97 @@ namespace cafe_pos_system.forms
             {
                 btnDashboard.Visible = false;
             }
-            foreach(Item item in items)
-            {
-                UCMenu ucMenu = new UCMenu(item);
-                flpMenu.Controls.Add(ucMenu);
-            }
 
-
+            ReloadMenu();
         }
 
-        
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public void ReloadMenu()
         {
-
+            flpMenu.Controls.Clear();
+            items = new ItemService().GetItem();
+            foreach (Item item in items)
+            {
+                UCMenu ucMenu = new UCMenu(item, this);
+                flpMenu.Controls.Add(ucMenu);
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new frmDashboard().ShowDialog();
+            new frmDashboard(this).ShowDialog();
         }
 
-        private void btnCheckin_Click(object sender, EventArgs e)
+
+        private void ClearTransaction()
         {
-            new frmPayment().Show();
+            lblGrandTotal.Text = "$0.00";
+            lblSubtotal.Text = "$0.00";
+            lblChangedMoney.Text = "$0.00";
+            txtDiscount.Text = "0";
+            txtRecieve.Text = "0";
+            SubTotal = 0;
+            Discount = 0;
+            ChangeMoney = 0;
+        }
+
+        private void txtDiscount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+            OutputTotal();
+        }
+
+        private void txtDiscount_Leave(object sender, EventArgs e)
+        {
+            if( txtDiscount.Text == "")
+            {
+                txtDiscount.Text = "0";
+            }
+        }
+
+        private void txtRecieve_TextChanged(object sender, EventArgs e)
+        {
+            
+            OutputTotal();
+        }
+
+        private void txtRecieve_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Confirm Check out?", "Check Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ClearTransaction();
+                flpOrder.Controls.Clear();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            foreach(UCMenu ucmenu in flpMenu.Controls)
+            {
+                if (ucmenu.ItemName.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    ucmenu.Visible = true;
+                }
+                else
+                {
+                    ucmenu.Visible = false;
+                }
+            }
         }
     }
 }

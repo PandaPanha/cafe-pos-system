@@ -91,12 +91,12 @@
             this.dgvItem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItem.Location = new System.Drawing.Point(-1, 257);
+            this.dgvItem.Location = new System.Drawing.Point(-1, 280);
             this.dgvItem.Margin = new System.Windows.Forms.Padding(2);
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.RowHeadersWidth = 62;
             this.dgvItem.RowTemplate.Height = 28;
-            this.dgvItem.Size = new System.Drawing.Size(1185, 404);
+            this.dgvItem.Size = new System.Drawing.Size(1185, 381);
             this.dgvItem.TabIndex = 7;
             this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
             // 
@@ -187,7 +187,7 @@
             this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
             this.btnUpload.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnUpload.Location = new System.Drawing.Point(32, 195);
+            this.btnUpload.Location = new System.Drawing.Point(32, 217);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(212, 58);
@@ -203,7 +203,7 @@
             this.pbItem.Location = new System.Drawing.Point(32, 11);
             this.pbItem.Margin = new System.Windows.Forms.Padding(2);
             this.pbItem.Name = "pbItem";
-            this.pbItem.Size = new System.Drawing.Size(212, 174);
+            this.pbItem.Size = new System.Drawing.Size(212, 202);
             this.pbItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbItem.TabIndex = 18;
             this.pbItem.TabStop = false;

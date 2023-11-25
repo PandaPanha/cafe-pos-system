@@ -14,11 +14,12 @@ namespace cafe_pos_system.forms
 {
     public partial class frmItems : Form
     {
-        ItemService itemService = new ItemService();
-        
-        public frmItems()
+        private ItemService itemService = new ItemService();
+        private frmMenu frmMenu;
+        public frmItems(frmMenu frmMenu)
         {
             InitializeComponent();
+            this.frmMenu = frmMenu;
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace cafe_pos_system.forms
                 itemService.InsertItem(GetInputItem());
                 MessageBox.Show("New Item has been added!", "Insert Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DisplayToDGV("");
+                frmMenu.ReloadMenu();
             }
             
         }
@@ -56,6 +58,7 @@ namespace cafe_pos_system.forms
                 MessageBox.Show("Update is completed!", "Update Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 itemService.UpdateItem(GetInputItem());
                 DisplayToDGV("");
+                frmMenu.ReloadMenu();
             }
         }
 
@@ -68,6 +71,7 @@ namespace cafe_pos_system.forms
                 itemService.DeleteItemById(int.Parse(txtItemID.Text));
                 ClearInput();
                 DisplayToDGV("");
+                frmMenu.ReloadMenu();
             }
         }
 

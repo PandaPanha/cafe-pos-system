@@ -48,9 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAccount.cs" />
+    <Compile Include="Contracts\IInvoice.cs" />
     <Compile Include="Contracts\IItem.cs" />
     <Compile Include="Contracts\IStaff.cs" />
     <Compile Include="DB\AccountDB.cs" />
+    <Compile Include="DB\InvoiceDB.cs" />
     <Compile Include="DB\ItemDB.cs" />
     <Compile Include="DB\POSCafeDB.cs" />
     <Compile Include="DB\StaffDB.cs" />

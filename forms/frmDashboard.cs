@@ -12,9 +12,11 @@ namespace cafe_pos_system.forms
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        private frmMenu frmMenu;
+        public frmDashboard(frmMenu frmMenu)
         {
             InitializeComponent();
+            this.frmMenu = frmMenu;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace cafe_pos_system.forms
 
         private void btnItems_Click(object sender, EventArgs e)
         {
-            new frmItems().ShowDialog();
+            new frmItems(frmMenu).ShowDialog();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)

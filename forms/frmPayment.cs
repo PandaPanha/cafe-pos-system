@@ -12,7 +12,7 @@ namespace cafe_pos_system.forms
 {
     public partial class frmPayment : Form
     {
-        private static decimal grandtotal = 10;
+        private static decimal grandtotal = 12;
         public frmPayment()
         {
             InitializeComponent();
