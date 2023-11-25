@@ -7,16 +7,33 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace cafe_pos_system.DB
 {
-    public class AccountDB : IAccount, IUser
+    public class AccountDB : IAccount
     {
         private SqlConnection con = POSCafeDB.GetConnection();
 
         public Account GetAccountByStaffId(int staffId)
         {
-            throw new NotImplementedException();
+            Account account = new Account();
+            string storedProcedureName = "spAccountByStaffId";
+            SqlCommand command = new SqlCommand(storedProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@inputStaffId", staffId);
+            con.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                account.Id = int.Parse(reader["accountId"].ToString());
+                account.Username = reader["username"].ToString();
+                account.Password = reader["password"].ToString();
+                account.UserType = reader["userType"].ToString();
+            }
+            con.Close();
+            return account;
         }
 
         public List<Account> GetAllAccount()
@@ -38,6 +55,7 @@ namespace cafe_pos_system.DB
                 account.Username = reader["username"].ToString();
                 account.Password = reader["password"].ToString();
                 account.UserType = reader["userType"].ToString();
+                account.StaffId = int.Parse(reader["staffId"].ToString());
                 accounts.Add(account);
             }
             con.Close();
@@ -61,28 +79,59 @@ namespace cafe_pos_system.DB
             {
                 account.Id = int.Parse(reader["accountId"].ToString());
                 account.Username = reader["username"].ToString();
+                account.Password = reader["password"].ToString();
                 account.UserType = reader["userType"].ToString();
             }
             con.Close();
             return account;
         }
 
-        public void CreateUser(string staffId, string username, string password, string userType)
+        public void InsertAccount(Account account)
         {
             string storeProcedureName = "spInsertAccount";
-            SqlCommand command= new SqlCommand(storeProcedureName, con);
+            SqlCommand command = new SqlCommand(storeProcedureName, con);
             command.CommandType = CommandType.StoredProcedure;
-            con.Open(); 
-            
-            command.Parameters.AddWithValue("@username", username);
-            command.Parameters.AddWithValue("@password", password);
-            command.Parameters.AddWithValue("@userType", userType);
-            command.Parameters.AddWithValue("@staffId", staffId);
+            con.Open();
+
+            command.Parameters.AddWithValue("@username", account.Username);
+            command.Parameters.AddWithValue("@password", account.Password);
+            command.Parameters.AddWithValue("@userType", account.UserType);
+            command.Parameters.AddWithValue("@staffId", account.StaffId);
 
             command.ExecuteNonQuery();
 
             con.Close();
+        }
 
+        public void UpdateAccount(Account account)
+        {
+            string storeProcedureName = "spUpdateAccount";
+            SqlCommand command = new SqlCommand(storeProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            command.Parameters.AddWithValue("@username", account.Username);
+            command.Parameters.AddWithValue("@password", account.Password);
+            command.Parameters.AddWithValue("@userType", account.UserType);
+            command.Parameters.AddWithValue("@staffId", account.StaffId);
+
+            command.ExecuteNonQuery();
+
+            con.Close();
+        }
+
+        public void DeleteAccountById(int accountId)
+        {
+            string storeProcedureName = "spDeleteAccount";
+            SqlCommand command = new SqlCommand(storeProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+
+            con.Open();
+
+            command.Parameters.AddWithValue("@accountId", accountId);
+
+            command.ExecuteNonQuery();
+
+            con.Close();
         }
     }
 }

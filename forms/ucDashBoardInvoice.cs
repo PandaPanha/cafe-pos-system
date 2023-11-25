@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace cafe_pos_system.forms
 {
-    public partial class ucDashBoardInvoice : UserControl
+    public partial class UCDashBoardInvoice : UserControl
     {
-        public ucDashBoardInvoice()
+        public UCDashBoardInvoice()
         {
             InitializeComponent();
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            new frmInvoice().Show();
+            new frmInvoice().ShowDialog();
         }
     }
 }

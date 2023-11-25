@@ -11,7 +11,11 @@ namespace cafe_pos_system.Contracts
     {
         Account GetUserCredentials(string username, string password);
         Account GetAccountByStaffId(int staffId);
-
         List<Account> GetAllAccount();
+        void InsertAccount(Account account);
+        void UpdateAccount(Account account);
+        void DeleteAccountById(int accountId);
+
+
     }
 }

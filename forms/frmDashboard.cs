@@ -30,17 +30,17 @@ namespace cafe_pos_system.forms
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
-            new frmCreateUser().Show();
+            new frmCreateUser().ShowDialog();
         }
 
         private void btnItems_Click(object sender, EventArgs e)
         {
-            new frmItems().Show();
+            new frmItems().ShowDialog();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            new frmStaff().Show();
+            new frmStaff().ShowDialog();
         }
     }
 }

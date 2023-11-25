@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cafe_pos_system.forms
 {
-    public partial class ucInvoiceItem : UserControl
+    public partial class UCInvoiceItem : UserControl
     {
-        public ucInvoiceItem()
+        public UCInvoiceItem()
         {
             InitializeComponent();
         }

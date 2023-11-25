@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cafe_pos_system.forms
 {
-    public partial class ucOrder : UserControl
+    public partial class UCOrder : UserControl
     {
-        public ucOrder()
+        public UCOrder()
         {
             InitializeComponent();
         }
