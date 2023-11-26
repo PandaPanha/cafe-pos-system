@@ -32,6 +32,21 @@ namespace cafe_pos_system.DB
             con.Close();
         }
 
+        public void DeleteInvoiceDetails(int invoiceId)
+        {
+            string storeProcedureName = "spDeleteInvoiceDetail";
+            SqlCommand command = new SqlCommand(storeProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+
+            con.Open();
+
+            command.Parameters.AddWithValue("@invoiceId", invoiceId);
+
+            command.ExecuteNonQuery();
+
+            con.Close();
+        }
+
         public List<Invoice> GetInvoice()
         {
             List<Invoice> invoices = new List<Invoice>();

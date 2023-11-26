@@ -64,5 +64,24 @@ namespace cafe_pos_system.services
             }
             return profit;
         }
+
+        public void DeleteInvoiceDetails(int invoiceId)
+        {
+            List<InvoiceDetail> invoiceDetails = GetInvoiceDetails(invoiceId);
+            ItemService itemService = new ItemService();
+            List<Item> items = itemService.GetItem();
+            foreach (InvoiceDetail invoiceDetail in invoiceDetails)
+            {
+                foreach(Item item in items)
+                {
+                    if(item.Id == invoiceDetail.ItemID)
+                    {
+                        item.SoldQty -= invoiceDetail.Qty;
+                        itemService.UpdateItem(item);
+                    }
+                }
+            }
+            invoiceDB.DeleteInvoiceDetails(invoiceId);  
+        }
     }
 }

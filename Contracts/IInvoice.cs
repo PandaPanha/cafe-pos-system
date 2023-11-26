@@ -14,6 +14,7 @@ namespace cafe_pos_system.Contracts
         void InsertInvoice(Invoice invoice);
         List<InvoiceDetail> GetInvoiceDetails(int invoiceId);
         void DeleteInvoice(int invoiceId);
+        void DeleteInvoiceDetails(int invoiceId);
         int GetLargestInvoiceId();
     }
 }

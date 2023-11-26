@@ -566,7 +566,6 @@
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnCreateUser;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.FlowLayoutPanel flpInvoiceDashBoard;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -595,5 +594,6 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.FlowLayoutPanel flpInvoiceDashBoard;
     }
 }

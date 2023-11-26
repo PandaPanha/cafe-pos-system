@@ -53,13 +53,14 @@ namespace cafe_pos_system.forms
 
         }
 
-        private void frmDashboard_Load(object sender, EventArgs e)
+        public void ReloadDashboard()
         {
             List<Invoice> invoices = invoiceService.GetInvoice();
-            foreach(Invoice invoice in invoices)
+            flpInvoiceDashBoard.Controls.Clear();
+            foreach (Invoice invoice in invoices)
             {
-                UCDashBoardInvoice ucDashBoardInvoice = new UCDashBoardInvoice(invoice);
-                flpInvoiceDashBoard.Controls.Add(ucDashBoardInvoice);   
+                UCDashBoardInvoice ucDashBoardInvoice = new UCDashBoardInvoice(invoice, this);
+                flpInvoiceDashBoard.Controls.Add(ucDashBoardInvoice);
             }
 
             lblSoldCup.Text = itemService.GetSoldCups().ToString();
@@ -67,9 +68,13 @@ namespace cafe_pos_system.forms
             lblTotalStaff.Text = staffService.GetTotalStaff().ToString();
             lblPopularDrink.Text = itemService.GetPopularDrink();
             lblCurrentAdmin.Text = currentUser.Username;
-
-
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            ReloadDashboard();
+        }
+
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

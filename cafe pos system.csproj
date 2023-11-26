@@ -92,12 +92,6 @@
     <Compile Include="forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\frmPayment.Designer.cs">
-      <DependentUpon>frmPayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\frmSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmPayment.resx">
-      <DependentUpon>frmPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmSelection.resx">
       <DependentUpon>frmSelection.cs</DependentUpon>
