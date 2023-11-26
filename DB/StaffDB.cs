@@ -145,6 +145,25 @@ namespace cafe_pos_system.DB
 
             con.Close();
         }
+
+        public string GetStaffName(int staffId)
+        {
+            
+            string storedProcedureName = "spGetStaffName";
+            SqlCommand command = new SqlCommand(storedProcedureName, con);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@staffId", staffId);
+            con.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            string staffName = "";
+            if (reader.Read())
+            {
+                staffName = reader["staffName"].ToString();
+            }
+            reader.Close();
+            con.Close();
+            return staffName;
+        }
     }
 
 }

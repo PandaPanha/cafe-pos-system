@@ -36,5 +36,23 @@ namespace cafe_pos_system.services
         {
             itemDB.UpdateItem(item);
         }
+
+        public int GetSoldCups()
+        {
+            List<Item> items = itemDB.GetItem();
+            int soldCups = 0;
+            foreach (Item item in items)
+            {
+                soldCups += item.SoldQty;
+            }
+            return soldCups;
+        }
+
+        public string GetPopularDrink()
+        {
+            List<Item> items = itemDB.GetItem();
+            Item popluarItem = items.OrderByDescending(item => item.SoldQty).First();
+            return popluarItem.Name;
+        }
     }
 }

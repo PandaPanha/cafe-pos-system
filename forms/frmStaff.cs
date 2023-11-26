@@ -100,43 +100,57 @@ namespace cafe_pos_system.forms
 
         private void txtStaffId_TextChanged(object sender, EventArgs e)
         {
+            // Retrieve a list of staff members using the staffService
             List<Staff> staffs = staffService.GetStaff();
+
+            // Clear input fields
             ClearInput();
+
+            // Check if the staff ID text box is empty
             if (txtStaffId.Text == string.Empty)
             {
+                // Enable insert mode and disable update and delete modes
                 EnableInsert(true);
                 EnableUpdate(false);
                 EnableDelete(false);
             }
             else
             {
+                // Disable insert mode
                 EnableInsert(false);
+
                 try
                 {
+                    // Iterate through the list of staff members
                     foreach (Staff staff in staffs)
                     {
+                        // Check if the ID of the current staff matches the one in the text box
                         if (staff.Id == int.Parse(txtStaffId.Text))
                         {
+                            // Enable update and delete modes
                             EnableUpdate(true);
                             EnableDelete(true);
+
+                            // Output the details of the staff member with the matching ID
                             OutputStaff(staffService.GetStaffById(int.Parse(txtStaffId.Text)));
+
+                            // Exit the loop since the staff member is found
                             break;
                         }
                         else
                         {
+                            // If the IDs don't match, disable update and delete modes
                             EnableUpdate(false);
                             EnableDelete(false);
                         }
                     }
                 }
-                catch(FormatException ms)
+                catch (FormatException ms)
                 {
+                    // Catch and display a FormatException if there's an issue with parsing the staff ID
                     MessageBox.Show(ms.Message, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
-                
             }
-
 
         }
 

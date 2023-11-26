@@ -6,16 +6,20 @@ namespace cafe_pos_system.forms
 {
     public partial class UCMenu : UserControl
     {
-        Item item;
-        public UCMenu(Item item)
+        private Item item;
+        private frmMenu frmMenu;
+        public string ItemName { get; set; }
+        public UCMenu(Item item, frmMenu frmMenu)
         {
             InitializeComponent();
+            this.frmMenu = frmMenu;
             this.item = item;
+            ItemName = item.Name;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            new frmSelection().ShowDialog();
+            new frmSelection(item, frmMenu).ShowDialog();
         }
 
         private void ucMenu_Load(object sender, EventArgs e)

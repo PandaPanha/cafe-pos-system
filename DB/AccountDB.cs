@@ -81,6 +81,7 @@ namespace cafe_pos_system.DB
                 account.Username = reader["username"].ToString();
                 account.Password = reader["password"].ToString();
                 account.UserType = reader["userType"].ToString();
+                account.StaffId = int.Parse(reader["staffId"].ToString());
             }
             con.Close();
             return account;

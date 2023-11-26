@@ -116,7 +116,6 @@ C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.frmInvoice.
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.frmItems.resources
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.frmLogin.resources
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.frmMenu.resources
-C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.frmPayment.resources
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.frmSelection.resources
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.frmStaff.resources
 C:\Users\User\Desktop\New folder (3)\obj\Debug\cafe_pos_system.forms.ucDashBoardInvoice.resources

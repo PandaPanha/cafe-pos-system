@@ -23,26 +23,23 @@ namespace cafe_pos_system
         private void btnLogin_Click(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
-            Account account = new Account();
+            Account account = accountService.GetUserCredentials(txtUsername.Text, txtPassword.Text);
 
-            account = accountService.GetUserCredentials(txtUsername.Text, txtPassword.Text);
-            OpenFormMenu(1, "Admin");
-            /*
             if (account.IsValidAccount())
             {
-                OpenFormMenu(account.Id, account.UserType);
+                OpenFormMenu(account);
             }
             else
             {
                 MessageBox.Show("Wrong username and password", "SignIn Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
         }
 
-        private void OpenFormMenu(int accountId, string userType)
+        private void OpenFormMenu(Account acc)
         {
             this.Hide();
-            var frmMenu = new frmMenu(accountId, userType, this);
+            var frmMenu = new frmMenu(acc, this);
             frmMenu.Closed += (s, arg) => this.Close();
             frmMenu.Show();
         }

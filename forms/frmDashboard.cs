@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cafe_pos_system.Models;
+using cafe_pos_system.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,17 @@ namespace cafe_pos_system.forms
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        private InvoiceService invoiceService = new InvoiceService();
+        private ItemService itemService = new ItemService();
+        private StaffService staffService = new StaffService();
+        private Account currentUser;
+
+        private frmMenu frmMenu;
+        public frmDashboard(frmMenu frmMenu, Account currentUser)
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.frmMenu = frmMenu;
+            this.currentUser = currentUser;
         }
 
         private void pnlStaff_Click(object sender, EventArgs e)
@@ -35,12 +40,55 @@ namespace cafe_pos_system.forms
 
         private void btnItems_Click(object sender, EventArgs e)
         {
-            new frmItems().ShowDialog();
+            new frmItems(frmMenu).ShowDialog();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             new frmStaff().ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void ReloadDashboard()
+        {
+            List<Invoice> invoices = invoiceService.GetInvoice();
+            flpInvoiceDashBoard.Controls.Clear();
+            foreach (Invoice invoice in invoices)
+            {
+                UCDashBoardInvoice ucDashBoardInvoice = new UCDashBoardInvoice(invoice, this);
+                flpInvoiceDashBoard.Controls.Add(ucDashBoardInvoice);
+            }
+
+            lblSoldCup.Text = itemService.GetSoldCups().ToString();
+            lblProfit.Text = invoiceService.GetProfit().ToString("$0.00");
+            lblTotalStaff.Text = staffService.GetTotalStaff().ToString();
+            lblPopularDrink.Text = itemService.GetPopularDrink();
+            lblCurrentAdmin.Text = currentUser.Username;
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            ReloadDashboard();
+        }
+
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            foreach (UCDashBoardInvoice ucDashBoardInvoice in flpInvoiceDashBoard.Controls)
+            {
+                if (ucDashBoardInvoice.ID.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    ucDashBoardInvoice.Visible = true;
+                }
+                else
+                {
+                    ucDashBoardInvoice.Visible = false;
+                }
+            }
         }
     }
 }

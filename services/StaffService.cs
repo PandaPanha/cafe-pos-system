@@ -37,5 +37,23 @@ namespace cafe_pos_system.services
         {
             staffDB.UpdateStaff(staff);
         }
+
+        public string GetStaffName(int staffId)
+        {
+            return staffDB.GetStaffName(staffId);
+        }
+
+        public int GetTotalStaff()
+        {
+            List<Staff> staffs = GetStaff();
+            int totalStaff = 0;
+
+            foreach(Staff staff in staffs)
+            {
+                totalStaff++;
+            }
+
+            return totalStaff;
+        }
     }
 }

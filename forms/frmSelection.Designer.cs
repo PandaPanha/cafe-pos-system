@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkAddIce = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbCup = new System.Windows.Forms.ComboBox();
+            this.cmbCupSize = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.cbSuger = new System.Windows.Forms.ComboBox();
+            this.cmbSugar = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbTopping = new System.Windows.Forms.ComboBox();
+            this.cmbTopping = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -47,12 +47,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
             this.panel1.Controls.Add(this.chkAddIce);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.cbCup);
+            this.panel1.Controls.Add(this.cmbCupSize);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnConfirm);
-            this.panel1.Controls.Add(this.cbSuger);
+            this.panel1.Controls.Add(this.cmbSugar);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.cbTopping);
+            this.panel1.Controls.Add(this.cmbTopping);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -64,11 +64,13 @@
             // chkAddIce
             // 
             this.chkAddIce.AutoSize = true;
+            this.chkAddIce.Checked = true;
+            this.chkAddIce.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAddIce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAddIce.Location = new System.Drawing.Point(204, 233);
             this.chkAddIce.Name = "chkAddIce";
             this.chkAddIce.Size = new System.Drawing.Size(112, 30);
-            this.chkAddIce.TabIndex = 9;
+            this.chkAddIce.TabIndex = 3;
             this.chkAddIce.Text = "Add Ice";
             this.chkAddIce.UseVisualStyleBackColor = true;
             // 
@@ -82,23 +84,24 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Cup Size:";
             // 
-            // cbCup
+            // cmbCupSize
             // 
-            this.cbCup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cbCup.FormattingEnabled = true;
-            this.cbCup.IntegralHeight = false;
-            this.cbCup.ItemHeight = 24;
-            this.cbCup.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large"});
-            this.cbCup.Location = new System.Drawing.Point(164, 183);
-            this.cbCup.Name = "cbCup";
-            this.cbCup.Size = new System.Drawing.Size(337, 32);
-            this.cbCup.TabIndex = 8;
-            this.cbCup.Text = "Select Suger Level";
-            this.cbCup.DropDown += new System.EventHandler(this.cbCup_DropDown);
+            this.cmbCupSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCupSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cmbCupSize.FormattingEnabled = true;
+            this.cmbCupSize.IntegralHeight = false;
+            this.cmbCupSize.ItemHeight = 24;
+            this.cmbCupSize.Items.AddRange(new object[] {
+            "Small\t\t+$0.00",
+            "Medium\t\t+$0.30",
+            "Large\t\t+$0.50"});
+            this.cmbCupSize.Location = new System.Drawing.Point(164, 183);
+            this.cmbCupSize.Name = "cmbCupSize";
+            this.cmbCupSize.Size = new System.Drawing.Size(337, 32);
+            this.cmbCupSize.TabIndex = 2;
+            this.cmbCupSize.Tag = "Cup Size";
+            this.cmbCupSize.Text = "Select Suger Level";
+            this.cmbCupSize.DropDown += new System.EventHandler(this.cbCup_DropDown);
             // 
             // btnCancel
             // 
@@ -109,7 +112,7 @@
             this.btnCancel.Location = new System.Drawing.Point(302, 287);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(199, 38);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -123,29 +126,30 @@
             this.btnConfirm.Location = new System.Drawing.Point(35, 287);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(199, 38);
-            this.btnConfirm.TabIndex = 5;
+            this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // cbSuger
+            // cmbSugar
             // 
-            this.cbSuger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSuger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cbSuger.FormattingEnabled = true;
-            this.cbSuger.IntegralHeight = false;
-            this.cbSuger.ItemHeight = 24;
-            this.cbSuger.Items.AddRange(new object[] {
+            this.cmbSugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cmbSugar.FormattingEnabled = true;
+            this.cmbSugar.IntegralHeight = false;
+            this.cmbSugar.ItemHeight = 24;
+            this.cmbSugar.Items.AddRange(new object[] {
             "25%",
             "50%",
             "75%",
             "100%"});
-            this.cbSuger.Location = new System.Drawing.Point(164, 123);
-            this.cbSuger.Name = "cbSuger";
-            this.cbSuger.Size = new System.Drawing.Size(337, 32);
-            this.cbSuger.TabIndex = 4;
-            this.cbSuger.Text = "Select Suger Level";
-            this.cbSuger.DropDown += new System.EventHandler(this.cbSuger_DropDown);
+            this.cmbSugar.Location = new System.Drawing.Point(164, 123);
+            this.cmbSugar.Name = "cmbSugar";
+            this.cmbSugar.Size = new System.Drawing.Size(337, 32);
+            this.cmbSugar.TabIndex = 1;
+            this.cmbSugar.Tag = "Sugar Level";
+            this.cmbSugar.Text = "Select Suger Level";
+            this.cmbSugar.DropDown += new System.EventHandler(this.cbSuger_DropDown);
             // 
             // label3
             // 
@@ -157,25 +161,27 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Selection";
             // 
-            // cbTopping
+            // cmbTopping
             // 
-            this.cbTopping.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cbTopping.FormattingEnabled = true;
-            this.cbTopping.IntegralHeight = false;
-            this.cbTopping.ItemHeight = 24;
-            this.cbTopping.Items.AddRange(new object[] {
-            "Bobba",
-            "Coconut",
-            "Cream",
-            "Ice Cream",
-            "Jelly"});
-            this.cbTopping.Location = new System.Drawing.Point(164, 61);
-            this.cbTopping.Name = "cbTopping";
-            this.cbTopping.Size = new System.Drawing.Size(337, 32);
-            this.cbTopping.TabIndex = 2;
-            this.cbTopping.Text = "Select a Topping";
-            this.cbTopping.DropDown += new System.EventHandler(this.cbTopping_DropDown);
+            this.cmbTopping.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cmbTopping.FormattingEnabled = true;
+            this.cmbTopping.IntegralHeight = false;
+            this.cmbTopping.ItemHeight = 24;
+            this.cmbTopping.Items.AddRange(new object[] {
+            "None\t\t+$0.00",
+            "Bobba\t\t+$0.5\t",
+            "Coconut\t\t+$0.5",
+            "Cream\t\t+$0.5",
+            "Ice Cream\t\t+$0.5",
+            "Jelly\t\t+$0.5"});
+            this.cmbTopping.Location = new System.Drawing.Point(164, 61);
+            this.cmbTopping.Name = "cmbTopping";
+            this.cmbTopping.Size = new System.Drawing.Size(337, 32);
+            this.cmbTopping.TabIndex = 0;
+            this.cmbTopping.Tag = "Topping";
+            this.cmbTopping.Text = "Select a Topping";
+            this.cmbTopping.DropDown += new System.EventHandler(this.cbTopping_DropDown);
             // 
             // label2
             // 
@@ -185,7 +191,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Suger Level:";
+            this.label2.Text = "Sugar Level:";
             // 
             // label1
             // 
@@ -218,12 +224,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbSuger;
+        private System.Windows.Forms.ComboBox cmbSugar;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.ComboBox cbTopping;
+        private System.Windows.Forms.ComboBox cmbTopping;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbCup;
+        private System.Windows.Forms.ComboBox cmbCupSize;
         private System.Windows.Forms.CheckBox chkAddIce;
     }
 }
