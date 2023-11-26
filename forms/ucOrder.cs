@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace cafe_pos_system.forms
         private Item item;
         private InvoiceDetail invoiceDetail;
         private frmMenu frmMenu;
+         
 
         public UCOrder(Item item, InvoiceDetail invoiceDetail, frmMenu frmMenu)
         {
@@ -23,27 +25,43 @@ namespace cafe_pos_system.forms
             this.item = item;
             this.invoiceDetail = invoiceDetail;
             this.frmMenu = frmMenu;
+            
         }
+
+        public InvoiceDetail GetInvoiceDetail()
+        {
+            invoiceDetail.Qty = int.Parse(txtQty.Text);
+            invoiceDetail.Amount = GetAmount();
+            return this.invoiceDetail;
+        }
+
+        public Item GetItemSoldQty()
+        {
+            this.item.SoldQty += int.Parse(txtQty.Text);
+            return this.item;
+        }
+
 
         public decimal GetAmount()
         {
-            return decimal.Parse(txtQty.Text == "" ? "0" : txtQty.Text) * (item.Price + invoiceDetail.CupSizePrice + invoiceDetail.ToppingPrice);
+            return int.Parse(txtQty.Text == "" ? "0" : txtQty.Text) * invoiceDetail.UnitPrice;
         }
         
 
         private void OutputOrder()
         {
             lblCupSize.Text = invoiceDetail.CupSize.ToString();
-            lblItem.Text = item.Name;
+            lblItem.Text = invoiceDetail.ItemName;
             lblSugar.Text = invoiceDetail.SugarLevel.ToString()+"%";
             lblIce.Text = invoiceDetail.Ice;
             lblTopping.Text = invoiceDetail.Topping;
-            lblUnitPrice.Text = (item.Price + invoiceDetail.CupSizePrice + invoiceDetail.ToppingPrice).ToString("$0.00");
+            lblUnitPrice.Text = invoiceDetail.UnitPrice.ToString("$0.00");
             lblAmount.Text = GetAmount().ToString("$0.00");
         }
 
         private void UCOrder_Load(object sender, EventArgs e)
         {
+            
             ReloadOutput();
         }
 

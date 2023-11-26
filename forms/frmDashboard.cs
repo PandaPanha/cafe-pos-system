@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cafe_pos_system.Models;
+using cafe_pos_system.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +14,17 @@ namespace cafe_pos_system.forms
 {
     public partial class frmDashboard : Form
     {
+        private InvoiceService invoiceService = new InvoiceService();
+        private ItemService itemService = new ItemService();
+        private StaffService staffService = new StaffService();
+        private Account currentUser;
+
         private frmMenu frmMenu;
-        public frmDashboard(frmMenu frmMenu)
+        public frmDashboard(frmMenu frmMenu, Account currentUser)
         {
             InitializeComponent();
             this.frmMenu = frmMenu;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.currentUser = currentUser;
         }
 
         private void pnlStaff_Click(object sender, EventArgs e)
@@ -43,6 +46,44 @@ namespace cafe_pos_system.forms
         private void btnStaff_Click(object sender, EventArgs e)
         {
             new frmStaff().ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            List<Invoice> invoices = invoiceService.GetInvoice();
+            foreach(Invoice invoice in invoices)
+            {
+                UCDashBoardInvoice ucDashBoardInvoice = new UCDashBoardInvoice(invoice);
+                flpInvoiceDashBoard.Controls.Add(ucDashBoardInvoice);   
+            }
+
+            lblSoldCup.Text = itemService.GetSoldCups().ToString();
+            lblProfit.Text = invoiceService.GetProfit().ToString("$0.00");
+            lblTotalStaff.Text = staffService.GetTotalStaff().ToString();
+            lblPopularDrink.Text = itemService.GetPopularDrink();
+            lblCurrentAdmin.Text = currentUser.Username;
+
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            foreach (UCDashBoardInvoice ucDashBoardInvoice in flpInvoiceDashBoard.Controls)
+            {
+                if (ucDashBoardInvoice.ID.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    ucDashBoardInvoice.Visible = true;
+                }
+                else
+                {
+                    ucDashBoardInvoice.Visible = false;
+                }
+            }
         }
     }
 }

@@ -28,6 +28,9 @@ namespace cafe_pos_system
 
         private void settleSelection()
         {
+            invoiceDetail.ItemID = item.Id;
+            invoiceDetail.ItemName = item.Name;
+            
             // Extract the topping from the combo box text before the '+' character and assign it to invoiceDetail.Topping
             invoiceDetail.Topping = cmbTopping.Text.Substring(0, cmbTopping.Text.IndexOf("+"));
 
@@ -63,6 +66,8 @@ namespace cafe_pos_system
             {
                 invoiceDetail.CupSizePrice = 0;
             }
+            // Determine final UnitPrice 
+            invoiceDetail.UnitPrice = item.Price + invoiceDetail.CupSizePrice + invoiceDetail.ToppingPrice;
         }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cafe_pos_system.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,28 @@ namespace cafe_pos_system.forms
 {
     public partial class UCDashBoardInvoice : UserControl
     {
-        public UCDashBoardInvoice()
+        private Invoice invoice;
+
+        public string ID {  get; set; }
+        public UCDashBoardInvoice(Invoice invoice)
         {
             InitializeComponent();
+            this.invoice = invoice;
+            ID = invoice.Id.ToString();
+        }
+
+
+        
+
+        private void UCDashBoardInvoice_Load(object sender, EventArgs e)
+        {
+            lblInvoiceID.Text = invoice.Id.ToString();
+            lblInvoiceDate.Text = invoice.InvoiceDate.ToString();
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            new frmInvoice().ShowDialog();
+            new frmInvoice(invoice.Id).ShowDialog();
         }
     }
 }

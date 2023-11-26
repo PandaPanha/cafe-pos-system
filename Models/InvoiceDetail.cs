@@ -10,6 +10,7 @@ namespace cafe_pos_system.Models
     {
         public int InvoiceID { get; set; }
         public int ItemID { get; set; }
+        public string ItemName { get; set; }
         public Char CupSize { get; set; }
         public decimal CupSizePrice { get; set; }
         public int SugarLevel { get; set; }

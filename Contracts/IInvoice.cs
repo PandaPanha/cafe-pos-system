@@ -10,9 +10,10 @@ namespace cafe_pos_system.Contracts
     public interface IInvoice
     {
         List<Invoice> GetInvoice();
-        Invoice GetInvoiceById();
+        Invoice GetInvoiceById(int invoiceId);
         void InsertInvoice(Invoice invoice);
-        void InsertInvoiceDetail(InvoiceDetail invoiceDetail);
-        void DeleteInvoice(int id);
+        List<InvoiceDetail> GetInvoiceDetails(int invoiceId);
+        void DeleteInvoice(int invoiceId);
+        int GetLargestInvoiceId();
     }
 }

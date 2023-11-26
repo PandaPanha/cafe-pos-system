@@ -15,12 +15,15 @@ namespace cafe_pos_system.forms
     public partial class frmMenu : Form
     {
         private Account CurrentUser = new Account();
+        private readonly InvoiceService invoiceService = new InvoiceService();
+        private readonly ItemService itemService = new ItemService();
         private frmLogin frmLogin;
         private List<Item> items;
         public decimal SubTotal { get; set; }
         public decimal Discount { get; set; }
         public decimal GrandTotal { get; set; }
         public decimal ChangeMoney { get; set; }
+        private int WaitingNo { get; set; }
 
         public void OutputTotal()
         {
@@ -50,11 +53,10 @@ namespace cafe_pos_system.forms
             
         }
 
-        public frmMenu(int accountId, string usertype, frmLogin frmLogin)
+        public frmMenu(Account account, frmLogin frmLogin)
         {
             InitializeComponent();
-            this.CurrentUser.Id = accountId;
-            this.CurrentUser.UserType = usertype;
+            this.CurrentUser = account;
             this.frmLogin = frmLogin;
             
         }
@@ -81,7 +83,7 @@ namespace cafe_pos_system.forms
             {
                 btnDashboard.Visible = false;
             }
-
+            WaitingNo = 1;
             ReloadMenu();
         }
 
@@ -98,7 +100,7 @@ namespace cafe_pos_system.forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new frmDashboard(this).ShowDialog();
+            new frmDashboard(this, CurrentUser).ShowDialog();
         }
 
 
@@ -149,15 +151,56 @@ namespace cafe_pos_system.forms
             }
         }
 
+        private Invoice GetInvoice()
+        {
+            Invoice invoice = new Invoice();
+            invoice.InvoiceDate = DateTime.UtcNow.ToShortDateString();
+            invoice.StaffId = CurrentUser.StaffId;
+            invoice.WaitingNo = WaitingNo;
+            invoice.SubTotal = SubTotal;
+            invoice.Discount = Discount;
+            invoice.GrandTotal = GrandTotal;
+            invoice.ReceivedMoney = decimal.Parse(txtRecieve.Text);
+            invoice.ChangeMoney = ChangeMoney;
+            return invoice;
+        }
+
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
+            if(flpOrder.Controls.Count <= 0)
+            {
+                MessageBox.Show("There is no order!", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(txtRecieve.Text == "0")
+            {
+                MessageBox.Show("Please enter receive value!", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(decimal.Parse(txtRecieve.Text) < GrandTotal)
+            {
+                MessageBox.Show("Receive value can't be less than Grand Total!", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DialogResult result = MessageBox.Show("Confirm Check out?", "Check Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                List<InvoiceDetail> invoiceDetailsList = new List<InvoiceDetail>();
+                foreach (UCOrder ucOrder in flpOrder.Controls)
+                {
+                    invoiceDetailsList.Add(ucOrder.GetInvoiceDetail());
+
+                    itemService.UpdateItem(ucOrder.GetItemSoldQty());
+                }
+                invoiceService.InsertInvoice(GetInvoice());
+                invoiceService.InsertInvoiceDetail(invoiceDetailsList);
+                WaitingNo++;
                 ClearTransaction();
                 flpOrder.Controls.Clear();
+                new frmInvoice(invoiceService.GetLargestInvoiceId()).ShowDialog();
             }
         }
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {

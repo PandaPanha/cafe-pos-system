@@ -142,6 +142,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\AccountService.cs" />
+    <Compile Include="services\InvoiceService.cs" />
     <Compile Include="services\ItemService.cs" />
     <Compile Include="services\PhoneService.cs" />
     <Compile Include="services\PictureService.cs" />
