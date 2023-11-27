@@ -237,6 +237,7 @@
             this.txtStaffId.TabIndex = 15;
             this.txtStaffId.Tag = "ID";
             this.txtStaffId.TextChanged += new System.EventHandler(this.txtStaffId_TextChanged);
+            this.txtStaffId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStaffId_KeyPress);
             // 
             // txtStaffName
             // 
@@ -370,7 +371,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackColor = System.Drawing.Color.LightGray;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SaddleBrown;
@@ -386,7 +387,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDelete.BackColor = System.Drawing.Color.Gray;
+            this.btnDelete.BackColor = System.Drawing.Color.LightGray;
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
@@ -493,6 +494,7 @@
             this.dgvStaff.RowTemplate.Height = 28;
             this.dgvStaff.Size = new System.Drawing.Size(1185, 229);
             this.dgvStaff.TabIndex = 51;
+            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
             // txtSearch
             // 

@@ -10,15 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace cafe_pos_system.forms
 {
     public partial class frmStaff : Form
     {
         private StaffService staffService = new StaffService();
-        public frmStaff()
+        private frmDashboard frmDashboard;
+        public frmStaff(frmDashboard frmDashboard)
         {
             InitializeComponent();
+            this.frmDashboard = frmDashboard;
         }
 
         private Staff GetInputStaff()
@@ -83,6 +86,9 @@ namespace cafe_pos_system.forms
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            //PictureService.BrowsePicture means that when you invoke this mehtod it will open file dialog
+            //allow you to browse for a picture
+            //after done selecting a picture, the picture will be stored in pbStaffPhoto.Image
             pbStaffPhoto.Image = PictureService.BrowsePicture();
         }
 
@@ -92,41 +98,65 @@ namespace cafe_pos_system.forms
             {
                 Staff staff = GetInputStaff();
                 staffService.InsertStaff(staff);
-                MessageBox.Show("Successully added a new staff", "Add Staff", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                MessageBox.Show("Successully added a new staff", "Add Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DisplayToDGV("");
+                frmDashboard.ReloadDashboard();
             }
         }
 
         private void txtStaffId_TextChanged(object sender, EventArgs e)
         {
+            // Retrieve a list of staff members using the staffService
             List<Staff> staffs = staffService.GetStaff();
+
+            // Clear input fields
             ClearInput();
+
+            // Check if the staff ID text box is empty
             if (txtStaffId.Text == string.Empty)
             {
-                btnInsert.Enabled = true;
-                btnInsert.BackColor = Color.FromArgb(238, 230, 216);
-                btnUpdate.Enabled = false;
-                btnUpdate.BackColor = Color.Gray;
-                btnDelete.Enabled = false;
-                btnDelete.BackColor = Color.Gray;
+                // Enable insert mode and disable update and delete modes
+                EnableInsert(true);
+                EnableUpdate(false);
+                EnableDelete(false);
             }
             else
             {
-                btnInsert.Enabled = false;
-                btnInsert.BackColor = Color.Gray;
-                foreach (Staff staff in staffs)
+                // Disable insert mode
+                EnableInsert(false);
+
+                try
                 {
-                    if (staff.Id == int.Parse(txtStaffId.Text))
+                    // Iterate through the list of staff members
+                    foreach (Staff staff in staffs)
                     {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
-                        btnDelete.BackColor = Color.FromArgb(210, 4, 45);
-                        btnUpdate.BackColor = Color.FromArgb(238, 230, 216);
-                        OutputStaff(staffService.GetStaffById(int.Parse(txtStaffId.Text)));
+                        // Check if the ID of the current staff matches the one in the text box
+                        if (staff.Id == int.Parse(txtStaffId.Text))
+                        {
+                            // Enable update and delete modes
+                            EnableUpdate(true);
+                            EnableDelete(true);
+
+                            // Output the details of the staff member with the matching ID
+                            OutputStaff(staffService.GetStaffById(int.Parse(txtStaffId.Text)));
+
+                            // Exit the loop since the staff member is found
+                            break;
+                        }
+                        else
+                        {
+                            // If the IDs don't match, disable update and delete modes
+                            EnableUpdate(false);
+                            EnableDelete(false);
+                        }
                     }
                 }
+                catch (FormatException ms)
+                {
+                    // Catch and display a FormatException if there's an issue with parsing the staff ID
+                    MessageBox.Show(ms.Message, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
 
         }
 
@@ -144,6 +174,7 @@ namespace cafe_pos_system.forms
                 MessageBox.Show("Successully deleted");
                 ClearInput();
                 DisplayToDGV("");
+                frmDashboard.ReloadDashboard();
             }
 
         }
@@ -154,7 +185,7 @@ namespace cafe_pos_system.forms
             {
                 Staff staff = GetInputStaff();
                 staffService.UpdateStaff(staff);
-                MessageBox.Show("Successully updated staff", "Update Staff", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                MessageBox.Show("Successully updated staff", "Update Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DisplayToDGV("");
             }
 
@@ -169,45 +200,8 @@ namespace cafe_pos_system.forms
         private void DisplayToDGV(string searchString)
         {
             List<Staff> staffList = staffService.GetStaff(); // Call the GetStaff method to retrieve the staff data
-
-            // Clear any existing rows in the DataGridView
-            dgvStaff.Rows.Clear();
-
-            dgvStaff.ColumnCount = 11;
-
-            dgvStaff.Columns[0].Name = "ID";
-            dgvStaff.Columns[1].Name = "Name";
-            dgvStaff.Columns[2].Name = "Gender";
-            dgvStaff.Columns[3].Name = "BirthDate";
-            dgvStaff.Columns[4].Name = "Salary";
-            dgvStaff.Columns[5].Name = "Position";
-            dgvStaff.Columns[6].Name = "Email";
-            dgvStaff.Columns[7].Name = "Phone";
-            dgvStaff.Columns[8].Name = "Address";
-            dgvStaff.Columns[9].Name = "HiredDate";
-            dgvStaff.Columns[10].Name = "StopWork";
-
-            // Loop through the staff list and add rows to the DataGridView
-            foreach (var staff in staffList)
-            {
-                if (staff.Name.ToLower().Contains(searchString.ToLower()) || staff.Phone.Contains(searchString))
-                {
-                    // Add a row to the DataGridView
-                    dgvStaff.Rows.Add(
-                        staff.Id,
-                        staff.Name,
-                        staff.Gender,
-                        DateTime.Parse(staff.BirthDate).ToString("dd-MM-yyyy"),
-                        staff.Salary,
-                        staff.Position,
-                        staff.Email,
-                        staff.Phone,
-                        staff.Address,
-                        DateTime.Parse(staff.HiredDate).ToString("dd-MM-yyyy"),
-                        staff.StopWork
-                    );
-                }
-            }
+            List<Staff> filteredStaff = staffList.Where(staff => staff.Name.ToLower().Contains(searchString.ToLower()) || staff.Phone.Contains(searchString)).ToList();
+            dgvStaff.DataSource = filteredStaff;
         }
 
         private bool IsValidInput()
@@ -248,6 +242,45 @@ namespace cafe_pos_system.forms
                 txtSearch.Text = "Search by name or phone...";
                 txtSearch.ForeColor = Color.LightGray;
             }
+        }
+
+        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the clicked area is a cell (not the header or anything else)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Assuming the ID is in the first column (index 0) of the DataGridView
+                object idValue = dgvStaff.Rows[e.RowIndex].Cells[0].Value;
+
+                // Display the ID in the TextBox
+                txtStaffId.Text = idValue.ToString();
+            }
+        }
+
+        private void txtStaffId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void EnableInsert(Boolean status)
+        {
+            btnInsert.Enabled = status;
+            btnInsert.BackColor = btnInsert.Enabled ? Color.FromArgb(238, 230, 216) : Color.LightGray;
+        }
+
+        private void EnableUpdate(Boolean status)
+        {
+            btnUpdate.Enabled = status;
+            btnUpdate.BackColor = btnUpdate.Enabled ? Color.FromArgb(238, 230, 216) : Color.LightGray;
+        }
+
+        private void EnableDelete(Boolean status)
+        {
+            btnDelete.Enabled = status;
+            btnDelete.BackColor = btnDelete.Enabled ? Color.FromArgb(210, 4, 45) : Color.LightGray;
         }
     }
 }

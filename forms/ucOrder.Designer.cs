@@ -1,6 +1,6 @@
 ﻿namespace cafe_pos_system.forms
 {
-    partial class ucOrder
+    partial class UCOrder
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,69 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCOrder));
             this.lblItem = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblUnitPrice = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblCupSize = new System.Windows.Forms.Label();
             this.lblSugar = new System.Windows.Forms.Label();
             this.lblIce = new System.Windows.Forms.Label();
             this.lblTopping = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblItem
             // 
             this.lblItem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblItem.AutoSize = true;
+            this.lblItem.AutoEllipsis = true;
             this.lblItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.Location = new System.Drawing.Point(53, 13);
+            this.lblItem.Location = new System.Drawing.Point(30, 13);
             this.lblItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(37, 17);
+            this.lblItem.Size = new System.Drawing.Size(150, 17);
             this.lblItem.TabIndex = 25;
             this.lblItem.Text = "Cafe";
-            this.lblItem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lblUnitPrice
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(195, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 17);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUnitPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUnitPrice.AutoSize = true;
+            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnitPrice.Location = new System.Drawing.Point(271, 11);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUnitPrice.Name = "lblUnitPrice";
+            this.lblUnitPrice.Size = new System.Drawing.Size(44, 17);
+            this.lblUnitPrice.TabIndex = 27;
+            this.lblUnitPrice.Text = "$3.00";
+            this.lblUnitPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label3
+            // lblAmount
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(271, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 17);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "$3.00";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(368, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "$3.00";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAmount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(368, 11);
+            this.lblAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(44, 17);
+            this.lblAmount.TabIndex = 28;
+            this.lblAmount.Text = "$3.00";
+            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnDelete
             // 
@@ -101,18 +88,19 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(447, 4);
+            this.btnDelete.Location = new System.Drawing.Point(447, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(78, 38);
             this.btnDelete.TabIndex = 29;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblCupSize
             // 
             this.lblCupSize.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCupSize.AutoSize = true;
             this.lblCupSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCupSize.Location = new System.Drawing.Point(12, 13);
+            this.lblCupSize.Location = new System.Drawing.Point(10, 13);
             this.lblCupSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCupSize.Name = "lblCupSize";
             this.lblCupSize.Size = new System.Drawing.Size(19, 17);
@@ -138,7 +126,7 @@
             this.lblIce.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblIce.AutoSize = true;
             this.lblIce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIce.Location = new System.Drawing.Point(53, 32);
+            this.lblIce.Location = new System.Drawing.Point(56, 32);
             this.lblIce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIce.Name = "lblIce";
             this.lblIce.Size = new System.Drawing.Size(75, 17);
@@ -151,7 +139,7 @@
             this.lblTopping.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTopping.AutoSize = true;
             this.lblTopping.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopping.Location = new System.Drawing.Point(12, 50);
+            this.lblTopping.Location = new System.Drawing.Point(10, 50);
             this.lblTopping.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTopping.Name = "lblTopping";
             this.lblTopping.Size = new System.Drawing.Size(49, 17);
@@ -159,21 +147,33 @@
             this.lblTopping.Text = "Cream";
             this.lblTopping.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ucOrder
+            // txtQty
+            // 
+            this.txtQty.Location = new System.Drawing.Point(188, 10);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(40, 20);
+            this.txtQty.TabIndex = 34;
+            this.txtQty.Text = "1";
+            this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
+            // 
+            // UCOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtQty);
             this.Controls.Add(this.lblTopping);
             this.Controls.Add(this.lblIce);
             this.Controls.Add(this.lblSugar);
             this.Controls.Add(this.lblCupSize);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.lblUnitPrice);
             this.Controls.Add(this.lblItem);
-            this.Name = "ucOrder";
+            this.Name = "UCOrder";
             this.Size = new System.Drawing.Size(528, 71);
+            this.Load += new System.EventHandler(this.UCOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,13 +182,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblUnitPrice;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblCupSize;
         private System.Windows.Forms.Label lblSugar;
         private System.Windows.Forms.Label lblIce;
         private System.Windows.Forms.Label lblTopping;
+        private System.Windows.Forms.TextBox txtQty;
     }
 }

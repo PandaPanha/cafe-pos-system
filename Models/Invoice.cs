@@ -17,5 +17,10 @@ namespace cafe_pos_system.Models
         public decimal ReceivedMoney {  get; set; }
         public decimal ChangeMoney { get; set; }
         public int StaffId {  get; set; } 
+
+        public Boolean IsValidReceivedMoney()
+        {
+            return ReceivedMoney > GrandTotal ? true : false; 
+        }
     }
 }

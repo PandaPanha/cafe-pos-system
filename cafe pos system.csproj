@@ -48,9 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAccount.cs" />
+    <Compile Include="Contracts\IInvoice.cs" />
     <Compile Include="Contracts\IItem.cs" />
     <Compile Include="Contracts\IStaff.cs" />
     <Compile Include="DB\AccountDB.cs" />
+    <Compile Include="DB\InvoiceDB.cs" />
     <Compile Include="DB\ItemDB.cs" />
     <Compile Include="DB\POSCafeDB.cs" />
     <Compile Include="DB\StaffDB.cs" />
@@ -90,12 +92,6 @@
     <Compile Include="forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\frmPayment.Designer.cs">
-      <DependentUpon>frmPayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\frmSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,29 +104,29 @@
     <Compile Include="forms\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucDashBoardInvoice.cs">
+    <Compile Include="forms\UCDashBoardInvoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucDashBoardInvoice.Designer.cs">
-      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
+    <Compile Include="forms\UCDashBoardInvoice.Designer.cs">
+      <DependentUpon>UCDashBoardInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucInvoiceItem.cs">
+    <Compile Include="forms\UCInvoiceItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucInvoiceItem.designer.cs">
-      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    <Compile Include="forms\UCInvoiceItem.designer.cs">
+      <DependentUpon>UCInvoiceItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucMenu.cs">
+    <Compile Include="forms\UCMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucMenu.Designer.cs">
-      <DependentUpon>ucMenu.cs</DependentUpon>
+    <Compile Include="forms\UCMenu.Designer.cs">
+      <DependentUpon>UCMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ucOrder.cs">
+    <Compile Include="forms\UCOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ucOrder.Designer.cs">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <Compile Include="forms\UCOrder.Designer.cs">
+      <DependentUpon>UCOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -140,6 +136,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\AccountService.cs" />
+    <Compile Include="services\InvoiceService.cs" />
     <Compile Include="services\ItemService.cs" />
     <Compile Include="services\PhoneService.cs" />
     <Compile Include="services\PictureService.cs" />
@@ -163,26 +160,23 @@
     <EmbeddedResource Include="forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmPayment.resx">
-      <DependentUpon>frmPayment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmSelection.resx">
       <DependentUpon>frmSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucDashBoardInvoice.resx">
-      <DependentUpon>ucDashBoardInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCDashBoardInvoice.resx">
+      <DependentUpon>UCDashBoardInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucInvoiceItem.resx">
-      <DependentUpon>ucInvoiceItem.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCInvoiceItem.resx">
+      <DependentUpon>UCInvoiceItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucMenu.resx">
-      <DependentUpon>ucMenu.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCMenu.resx">
+      <DependentUpon>UCMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ucOrder.resx">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <EmbeddedResource Include="forms\UCOrder.resx">
+      <DependentUpon>UCOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,13 +203,10 @@
   <ItemGroup>
     <Content Include="forms\Images\icons8-add-user-48.png" />
     <Content Include="forms\Images\icons8-dashboard-50.png" />
-    <Content Include="forms\Images\icons8-delete-48.png" />
     <Content Include="forms\Images\icons8-food-30.png" />
-    <Content Include="forms\Images\icons8-food-60.png" />
     <Content Include="forms\Images\icons8-food-bar-50 %281%29.png" />
     <Content Include="forms\Images\icons8-search-50.png" />
     <Content Include="forms\Images\icons8-staff-48 %281%29.png" />
-    <Content Include="forms\Images\icons8-view-48.png" />
     <Content Include="forms\Images\images.jpg" />
     <Content Include="forms\Images\Java.png" />
   </ItemGroup>

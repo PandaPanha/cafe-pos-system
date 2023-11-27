@@ -37,14 +37,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblInvoiceId = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblinvoiceDate = new System.Windows.Forms.Label();
+            this.lblWaitingNo = new System.Windows.Forms.Label();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblGrandTotal = new System.Windows.Forms.Label();
+            this.lblChangeMoney = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -52,17 +52,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblRecieve = new System.Windows.Forms.Label();
+            this.flpInvoice = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.ucInvoiceItem1 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem2 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem3 = new cafe_pos_system.forms.ucInvoiceItem();
-            this.ucInvoiceItem4 = new cafe_pos_system.forms.ucInvoiceItem();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -104,12 +99,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(249, 72);
+            this.label3.Location = new System.Drawing.Point(218, 71);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 17);
+            this.label3.Size = new System.Drawing.Size(90, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Staff Name          :";
+            this.label3.Text = "Staff Name  :";
             // 
             // label4
             // 
@@ -158,94 +153,100 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(247, 104);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(217, 100);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 26);
+            this.label9.Size = new System.Drawing.Size(102, 24);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Wating No";
+            this.label9.Text = "Waiting No";
             // 
-            // label10
+            // lblInvoiceId
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(123, 75);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
+            this.lblInvoiceId.AutoSize = true;
+            this.lblInvoiceId.Location = new System.Drawing.Point(123, 75);
+            this.lblInvoiceId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvoiceId.Name = "lblInvoiceId";
+            this.lblInvoiceId.Size = new System.Drawing.Size(13, 13);
+            this.lblInvoiceId.TabIndex = 9;
+            this.lblInvoiceId.Text = "0";
             // 
-            // label11
+            // lblName
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(413, 75);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "label11";
+            this.lblName.AutoEllipsis = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(309, 67);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(144, 25);
+            this.lblName.TabIndex = 10;
+            this.lblName.Text = "name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label12
+            // lblinvoiceDate
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(123, 107);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "label12";
+            this.lblinvoiceDate.AutoSize = true;
+            this.lblinvoiceDate.Location = new System.Drawing.Point(123, 107);
+            this.lblinvoiceDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblinvoiceDate.Name = "lblinvoiceDate";
+            this.lblinvoiceDate.Size = new System.Drawing.Size(79, 13);
+            this.lblinvoiceDate.TabIndex = 11;
+            this.lblinvoiceDate.Text = "MM/DD/YYYY";
             // 
-            // label13
+            // lblWaitingNo
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(411, 104);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 26);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "15";
+            this.lblWaitingNo.AutoSize = true;
+            this.lblWaitingNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWaitingNo.Location = new System.Drawing.Point(359, 100);
+            this.lblWaitingNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWaitingNo.Name = "lblWaitingNo";
+            this.lblWaitingNo.Size = new System.Drawing.Size(24, 26);
+            this.lblWaitingNo.TabIndex = 12;
+            this.lblWaitingNo.Text = "0";
             // 
-            // label14
+            // lblSubTotal
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(363, 15);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "label14";
+            this.lblSubTotal.AutoSize = true;
+            this.lblSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTotal.Location = new System.Drawing.Point(363, 15);
+            this.lblSubTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(44, 17);
+            this.lblSubTotal.TabIndex = 13;
+            this.lblSubTotal.Text = "$0.00";
             // 
-            // label15
+            // lblDiscount
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(363, 38);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "label15";
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(363, 38);
+            this.lblDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(28, 17);
+            this.lblDiscount.TabIndex = 14;
+            this.lblDiscount.Text = "0%";
             // 
-            // label16
+            // lblGrandTotal
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(363, 60);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "label16";
+            this.lblGrandTotal.AutoSize = true;
+            this.lblGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrandTotal.Location = new System.Drawing.Point(363, 60);
+            this.lblGrandTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGrandTotal.Name = "lblGrandTotal";
+            this.lblGrandTotal.Size = new System.Drawing.Size(44, 17);
+            this.lblGrandTotal.TabIndex = 15;
+            this.lblGrandTotal.Text = "$0.00";
             // 
-            // label17
+            // lblChangeMoney
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(363, 82);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "label17";
+            this.lblChangeMoney.AutoSize = true;
+            this.lblChangeMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangeMoney.Location = new System.Drawing.Point(363, 82);
+            this.lblChangeMoney.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChangeMoney.Name = "lblChangeMoney";
+            this.lblChangeMoney.Size = new System.Drawing.Size(44, 17);
+            this.lblChangeMoney.TabIndex = 16;
+            this.lblChangeMoney.Text = "$0.00";
             // 
             // panel2
             // 
@@ -320,28 +321,24 @@
             this.label23.TabIndex = 25;
             this.label23.Text = "Receive";
             // 
-            // label24
+            // lblRecieve
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(113, 81);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 13);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "label24";
+            this.lblRecieve.AutoSize = true;
+            this.lblRecieve.Location = new System.Drawing.Point(113, 81);
+            this.lblRecieve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRecieve.Name = "lblRecieve";
+            this.lblRecieve.Size = new System.Drawing.Size(34, 13);
+            this.lblRecieve.TabIndex = 26;
+            this.lblRecieve.Text = "$0.00";
             // 
-            // flowLayoutPanel1
+            // flpInvoice
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem1);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem2);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem3);
-            this.flowLayoutPanel1.Controls.Add(this.ucInvoiceItem4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 194);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 320);
-            this.flowLayoutPanel1.TabIndex = 27;
+            this.flpInvoice.AutoScroll = true;
+            this.flpInvoice.Location = new System.Drawing.Point(23, 194);
+            this.flpInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.flpInvoice.Name = "flpInvoice";
+            this.flpInvoice.Size = new System.Drawing.Size(430, 320);
+            this.flpInvoice.TabIndex = 27;
             // 
             // panel5
             // 
@@ -359,14 +356,14 @@
             // 
             this.panel6.Controls.Add(this.label23);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.label24);
+            this.panel6.Controls.Add(this.lblRecieve);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.label17);
+            this.panel6.Controls.Add(this.lblChangeMoney);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.lblGrandTotal);
+            this.panel6.Controls.Add(this.lblSubTotal);
+            this.panel6.Controls.Add(this.lblDiscount);
             this.panel6.Location = new System.Drawing.Point(21, 518);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
@@ -384,42 +381,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "GrandTotal";
             // 
-            // ucInvoiceItem1
-            // 
-            this.ucInvoiceItem1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucInvoiceItem1.Location = new System.Drawing.Point(2, 2);
-            this.ucInvoiceItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucInvoiceItem1.Name = "ucInvoiceItem1";
-            this.ucInvoiceItem1.Size = new System.Drawing.Size(411, 66);
-            this.ucInvoiceItem1.TabIndex = 0;
-            // 
-            // ucInvoiceItem2
-            // 
-            this.ucInvoiceItem2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucInvoiceItem2.Location = new System.Drawing.Point(2, 72);
-            this.ucInvoiceItem2.Margin = new System.Windows.Forms.Padding(2);
-            this.ucInvoiceItem2.Name = "ucInvoiceItem2";
-            this.ucInvoiceItem2.Size = new System.Drawing.Size(411, 66);
-            this.ucInvoiceItem2.TabIndex = 1;
-            // 
-            // ucInvoiceItem3
-            // 
-            this.ucInvoiceItem3.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucInvoiceItem3.Location = new System.Drawing.Point(2, 142);
-            this.ucInvoiceItem3.Margin = new System.Windows.Forms.Padding(2);
-            this.ucInvoiceItem3.Name = "ucInvoiceItem3";
-            this.ucInvoiceItem3.Size = new System.Drawing.Size(411, 66);
-            this.ucInvoiceItem3.TabIndex = 2;
-            // 
-            // ucInvoiceItem4
-            // 
-            this.ucInvoiceItem4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucInvoiceItem4.Location = new System.Drawing.Point(2, 212);
-            this.ucInvoiceItem4.Margin = new System.Windows.Forms.Padding(2);
-            this.ucInvoiceItem4.Name = "ucInvoiceItem4";
-            this.ucInvoiceItem4.Size = new System.Drawing.Size(411, 66);
-            this.ucInvoiceItem4.TabIndex = 3;
-            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,13 +388,13 @@
             this.ClientSize = new System.Drawing.Size(486, 656);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpInvoice);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblWaitingNo);
+            this.Controls.Add(this.lblinvoiceDate);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblInvoiceId);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -442,9 +403,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInvoice";
             this.Text = "frmInvoice";
+            this.Load += new System.EventHandler(this.frmInvoice_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -465,14 +426,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblInvoiceId;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblinvoiceDate;
+        private System.Windows.Forms.Label lblWaitingNo;
+        private System.Windows.Forms.Label lblSubTotal;
+        private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.Label lblGrandTotal;
+        private System.Windows.Forms.Label lblChangeMoney;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label18;
@@ -480,14 +441,10 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lblRecieve;
+        private System.Windows.Forms.FlowLayoutPanel flpInvoice;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-        private ucInvoiceItem ucInvoiceItem1;
-        private ucInvoiceItem ucInvoiceItem2;
-        private ucInvoiceItem ucInvoiceItem3;
-        private ucInvoiceItem ucInvoiceItem4;
     }
 }
