@@ -106,14 +106,17 @@ namespace cafe_pos_system.forms
 
         private void ClearTransaction()
         {
-            lblGrandTotal.Text = "$0.00";
-            lblSubtotal.Text = "$0.00";
-            lblChangedMoney.Text = "$0.00";
-            txtDiscount.Text = "0";
-            txtRecieve.Text = "0";
             SubTotal = 0;
             Discount = 0;
             ChangeMoney = 0;
+            Discount = 0;
+            txtDiscount.Text = "0";
+            txtRecieve.Text = "0";
+            lblGrandTotal.Text = "$0.00";
+            lblSubtotal.Text = "$0.00";
+            lblChangedMoney.Text = "$0.00";
+            MessageBox.Show("Clear");
+            
         }
 
         private void txtDiscount_KeyPress(object sender, KeyPressEventArgs e)

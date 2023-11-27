@@ -40,7 +40,17 @@ namespace cafe_pos_system.services
 
         public string GetStaffName(int staffId)
         {
-            return staffDB.GetStaffName(staffId);
+            List<Staff> staffList = GetStaff();
+            string staffname = "";
+            foreach(Staff staff in staffList)
+            {
+                if(staff.Id == staffId)
+                {
+                    staffname = staff.Name;
+                    break;
+                }
+            }
+            return staffname;
         }
 
         public int GetTotalStaff()
