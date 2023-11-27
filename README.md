@@ -1,7 +1,7 @@
 # cafe-pos-system
 This is a mini POS system for a cafe restaurant. </br>
 
-# How to use each form ?
+# How to use ?
 # Form Login
 _ You must own an account before sign in </br>
 _ You can sign in as an admin or a user </br>
