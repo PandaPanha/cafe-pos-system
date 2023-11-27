@@ -6,8 +6,8 @@ This is a mini POS system for a cafe restaurant.
 _ You must own an account before sign in
 _ You can sign in as an admin or a user 
 # Form Menu 
-_ If you sign in as an Admin, you can place order normally and Dashboard is exclusively available for you 
-_ If you sign in as a user, you can only place order 
+_ If you sign in as an Admin, you can place order normally and Dashboard is exclusively available for you </br>
+_ If you sign in as a user, you can only place order </br>
 _ Before checking out:
   1. place order
   2. Go through selection and confirm selection
@@ -17,8 +17,8 @@ _ Before checking out:
 # Form Selection
 _ For choosing Topping, Sugar level, Cup size, and Ice
 # Form Dashboard
-_ This form is designed for management and administrator 
-_ Admin can see the statistics of sold amount, profit, total staff, and Popular drink in the restaurant
+_ This form is designed for management and administrator </br>
+_ Admin can see the statistics of sold amount, profit, total staff, and Popular drink in the restaurant </br>
 _ Admin can view, search, and delete invoice history 
 _ Admin have the right to go to other forms include: form CreateUser, form Item, form Staff
 # Form CreateUser
