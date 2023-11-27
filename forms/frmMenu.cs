@@ -115,8 +115,6 @@ namespace cafe_pos_system.forms
             lblGrandTotal.Text = "$0.00";
             lblSubtotal.Text = "$0.00";
             lblChangedMoney.Text = "$0.00";
-            MessageBox.Show("Clear");
-            
         }
 
         private void txtDiscount_KeyPress(object sender, KeyPressEventArgs e)
