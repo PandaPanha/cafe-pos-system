@@ -42,7 +42,7 @@
             // 
             this.pbProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbProduct.Image = ((System.Drawing.Image)(resources.GetObject("pbProduct.Image")));
-            this.pbProduct.Location = new System.Drawing.Point(31, 10);
+            this.pbProduct.Location = new System.Drawing.Point(25, 17);
             this.pbProduct.Name = "pbProduct";
             this.pbProduct.Size = new System.Drawing.Size(230, 286);
             this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnAdd.Location = new System.Drawing.Point(31, 333);
+            this.btnAdd.Location = new System.Drawing.Point(25, 340);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(230, 38);
             this.btnAdd.TabIndex = 3;
@@ -83,7 +83,7 @@
             this.lbPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(230)))), ((int)(((byte)(216)))));
-            this.lbPrice.Location = new System.Drawing.Point(219, 10);
+            this.lbPrice.Location = new System.Drawing.Point(207, 17);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(66, 26);
             this.lbPrice.TabIndex = 2;
@@ -92,7 +92,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lbName);
-            this.panel1.Location = new System.Drawing.Point(31, 299);
+            this.panel1.Location = new System.Drawing.Point(25, 306);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 31);
             this.panel1.TabIndex = 4;
@@ -106,7 +106,7 @@
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.pbProduct);
             this.Name = "UCMenu";
-            this.Size = new System.Drawing.Size(284, 390);
+            this.Size = new System.Drawing.Size(280, 402);
             this.Load += new System.EventHandler(this.ucMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.panel1.ResumeLayout(false);

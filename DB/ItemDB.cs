@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace cafe_pos_system.DB
 {
@@ -18,99 +19,141 @@ namespace cafe_pos_system.DB
 
         public void DeleteItemById(int id)
         {
-            string storeProcedureName = "spDeleteItem";
-            SqlCommand command = new SqlCommand(storeProcedureName, con);
-            command.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                string storeProcedureName = "spDeleteItem";
+                SqlCommand command = new SqlCommand(storeProcedureName, con);
+                command.CommandType = CommandType.StoredProcedure;
 
-            con.Open();
+                con.Open();
 
-            command.Parameters.AddWithValue("@itemId", id);
+                command.Parameters.AddWithValue("@itemId", id);
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
-            con.Close();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public Item GetByItemById(int id)
         {
-            Item item = new Item();
-            string storedProcedureName = "spGetItemById";
-            SqlCommand command = new SqlCommand(storedProcedureName, con);
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@itemId", id);
-            con.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            try
             {
-                item.Name = reader["itemName"].ToString();
-                item.Price = decimal.Parse(reader["price"].ToString());
-                item.SoldQty = int.Parse(reader["soldQty"].ToString());
-                item.Picture = new Bitmap(PictureService.ConvertBinaryToImg((byte[])reader["picture"]));
+                Item item = new Item();
+                string storedProcedureName = "spGetItemById";
+                SqlCommand command = new SqlCommand(storedProcedureName, con);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@itemId", id);
+                con.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    item.Name = reader["itemName"].ToString();
+                    item.Price = decimal.Parse(reader["price"].ToString());
+                    item.SoldQty = int.Parse(reader["soldQty"].ToString());
+                    item.Picture = new Bitmap(PictureService.ConvertBinaryToImg((byte[])reader["picture"]));
+                }
+                reader.Close();
+                con.Close();
+                return item;
             }
-            reader.Close();
-            con.Close();
-            return item;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            
         }
 
         public List<Item> GetItem()
         {
-            List<Item> items = new List<Item>();
-            string storedProcedureName = "spGetItem";
-            SqlCommand command = new SqlCommand(storedProcedureName, con);
-            command.CommandType = CommandType.StoredProcedure;
-            
-            con.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            while(reader.Read())
+            try
             {
-                Item item = new Item();
-                item.Id = int.Parse(reader["itemId"].ToString());
-                item.Name = reader["itemName"].ToString();
-                item.Price = decimal.Parse(reader["price"].ToString());
-                item.SoldQty = int.Parse(reader["soldQty"].ToString());
-                item.Picture = new Bitmap(PictureService.ConvertBinaryToImg((byte[])reader["picture"]));
-                items.Add(item);
+                List<Item> items = new List<Item>();
+                string storedProcedureName = "spGetItem";
+                SqlCommand command = new SqlCommand(storedProcedureName, con);
+                command.CommandType = CommandType.StoredProcedure;
+
+                con.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Item item = new Item();
+                    item.Id = int.Parse(reader["itemId"].ToString());
+                    item.Name = reader["itemName"].ToString();
+                    item.Price = decimal.Parse(reader["price"].ToString());
+                    item.SoldQty = int.Parse(reader["soldQty"].ToString());
+                    item.Picture = new Bitmap(PictureService.ConvertBinaryToImg((byte[])reader["picture"]));
+                    items.Add(item);
+                }
+                reader.Close();
+                con.Close();
+                return items;
             }
-            reader.Close();
-            con.Close();
-            return items;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            
         }
 
         public void InsertItem(Item item)
         {
-            string storeProcedureName = "spInsertItem";
-            SqlCommand command = new SqlCommand(storeProcedureName, con);
-            command.CommandType = CommandType.StoredProcedure;
-            con.Open();
+            try
+            {
+                string storeProcedureName = "spInsertItem";
+                SqlCommand command = new SqlCommand(storeProcedureName, con);
+                command.CommandType = CommandType.StoredProcedure;
+                con.Open();
 
-            command.Parameters.AddWithValue("@itemName", item.Name);
-            command.Parameters.AddWithValue("@price", item.Price);
-            command.Parameters.AddWithValue("@soldQty", item.SoldQty);
-            command.Parameters.AddWithValue("@picture", PictureService.ConvertImgToBinary(item.Picture));
+                command.Parameters.AddWithValue("@itemName", item.Name);
+                command.Parameters.AddWithValue("@price", item.Price);
+                command.Parameters.AddWithValue("@soldQty", item.SoldQty);
+                command.Parameters.AddWithValue("@picture", PictureService.ConvertImgToBinary(item.Picture));
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
-            con.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void UpdateItem(Item item)
         {
-            string storeProcedureName = "spUpdateItem";
-            SqlCommand command = new SqlCommand(storeProcedureName, con);
-            command.CommandType = CommandType.StoredProcedure;
-            con.Open();
+            try
+            {
+                string storeProcedureName = "spUpdateItem";
+                SqlCommand command = new SqlCommand(storeProcedureName, con);
+                command.CommandType = CommandType.StoredProcedure;
+                con.Open();
 
-            command.Parameters.AddWithValue("@itemId", item.Id);
-            command.Parameters.AddWithValue("@itemName", item.Name);
-            command.Parameters.AddWithValue("@price", item.Price);
-            command.Parameters.AddWithValue("@soldQty", item.SoldQty);
-            command.Parameters.AddWithValue("@picture", PictureService.ConvertImgToBinary(item.Picture));
+                command.Parameters.AddWithValue("@itemId", item.Id);
+                command.Parameters.AddWithValue("@itemName", item.Name);
+                command.Parameters.AddWithValue("@price", item.Price);
+                command.Parameters.AddWithValue("@soldQty", item.SoldQty);
+                command.Parameters.AddWithValue("@picture", PictureService.ConvertImgToBinary(item.Picture));
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
-            con.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

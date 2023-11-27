@@ -79,8 +79,11 @@ namespace cafe_pos_system
 
                 if (result == DialogResult.OK)
                 {
+                    //Retreive all selections from form selection
                     settleSelection();
+                    //Add item price to subTotal
                     frmMenu.SubTotal += item.Price;
+                    //Add UCOrder to flpOrder FlowLayoutPanel 
                     frmMenu.flpOrder.Controls.Add(new UCOrder(item, invoiceDetail, frmMenu));
                     frmMenu.OutputTotal();
                     this.Close();

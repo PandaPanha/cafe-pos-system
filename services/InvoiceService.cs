@@ -67,21 +67,50 @@ namespace cafe_pos_system.services
 
         public void DeleteInvoiceDetails(int invoiceId)
         {
+            // Retrieve invoice details for the given invoice ID
             List<InvoiceDetail> invoiceDetails = GetInvoiceDetails(invoiceId);
+
+            // Create a new instance of ItemService
             ItemService itemService = new ItemService();
+
+            // Retrieve a list of items
             List<Item> items = itemService.GetItem();
+
+            // Iterate through each InvoiceDetail associated with the given invoice ID
             foreach (InvoiceDetail invoiceDetail in invoiceDetails)
             {
-                foreach(Item item in items)
+                // Iterate through each Item in the list of items
+                foreach (Item item in items)
                 {
-                    if(item.Id == invoiceDetail.ItemID)
+                    // Find the item related to the current InvoiceDetail
+                    if (item.Id == invoiceDetail.ItemID)
                     {
+                        // Update the sold quantity of the item by subtracting the quantity from the InvoiceDetail
                         item.SoldQty -= invoiceDetail.Qty;
+
+                        // Update the item's information in the database via the ItemService
                         itemService.UpdateItem(item);
                     }
                 }
             }
-            invoiceDB.DeleteInvoiceDetails(invoiceId);  
+
+            // Delete the invoice details associated with the given invoice ID from the database
+            invoiceDB.DeleteInvoiceDetails(invoiceId);
+
+            /*
+            1. **Retrieve Invoice Details**: It fetches the list of invoice details associated with the provided `invoiceId`.
+            2. **Item Service Initialization**: Initializes an `ItemService` to interact with items.
+            3. **Fetch Items**: Retrieves a list of all items.
+            4. **Iterate Through Invoice Details**: For each invoice detail related to the given invoice ID:
+               - It loops through the list of items.
+               - If the item ID matches the ID in the current invoice detail:
+                 - It subtracts the quantity of the invoice detail from the item's `SoldQty`.
+                 - Updates the item's information in the database through the `ItemService`.
+            5. **Delete Invoice Details**: Finally, it deletes all invoice details associated with the provided `invoiceId` from the database using `invoiceDB.DeleteInvoiceDetails(invoiceId)`.
+
+            This method effectively adjusts the sold quantity of items based on the deleted invoice details and then removes those invoice details from the database.
+            */
         }
+
     }
 }

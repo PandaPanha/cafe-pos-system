@@ -203,13 +203,10 @@
   <ItemGroup>
     <Content Include="forms\Images\icons8-add-user-48.png" />
     <Content Include="forms\Images\icons8-dashboard-50.png" />
-    <Content Include="forms\Images\icons8-delete-48.png" />
     <Content Include="forms\Images\icons8-food-30.png" />
-    <Content Include="forms\Images\icons8-food-60.png" />
     <Content Include="forms\Images\icons8-food-bar-50 %281%29.png" />
     <Content Include="forms\Images\icons8-search-50.png" />
     <Content Include="forms\Images\icons8-staff-48 %281%29.png" />
-    <Content Include="forms\Images\icons8-view-48.png" />
     <Content Include="forms\Images\images.jpg" />
     <Content Include="forms\Images\Java.png" />
   </ItemGroup>

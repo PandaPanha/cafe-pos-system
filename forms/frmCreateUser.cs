@@ -35,11 +35,6 @@ namespace cafe_pos_system.forms
 
         
 
-        private void frmCreateUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (IsValidInput())
@@ -140,13 +135,23 @@ namespace cafe_pos_system.forms
                 
                 foreach (Staff staff in staffs)
                 {
-                    if (staff.Id == int.Parse(txtStaffID.Text))
+                    if (staff.Id == int.Parse(txtStaffID.Text) && accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
                     {
+                        
                         EnableInput(true);
-                        EnableButtonCreate(true);
+                        EnableButtonCreate(false);
                         EnableButtonUpdate(true);
                         OutputStaff(GetStaffAccount(), staff);
                     }
+                    else if(staff.Id == int.Parse(txtStaffID.Text) && !accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
+                    {
+                        
+                        EnableInput(true);
+                        EnableButtonCreate(true);
+                        EnableButtonUpdate(false);
+                        OutputStaff(GetStaffAccount(), staff);
+                    }
+                    
                 }
             }
             

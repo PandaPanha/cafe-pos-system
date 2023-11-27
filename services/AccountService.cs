@@ -44,5 +44,19 @@ namespace cafe_pos_system.services
         {
             accountDB.UpdateAccount(account);
         }
+
+        public Boolean HasStaffAccount(int staffId)
+        {
+            List<Account> accountList = GetAllAccount();
+            foreach(Account acc in accountList)
+            {
+                
+                if(acc.StaffId == staffId)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

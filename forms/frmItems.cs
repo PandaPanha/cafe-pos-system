@@ -126,34 +126,43 @@ namespace cafe_pos_system.forms
             }
         }
 
-        
-
         private void txtItemID_TextChanged(object sender, EventArgs e)
         {
+            // Retrieve a list of items using the itemService
             List<Item> items = itemService.GetItem();
+
+            // Clear the input controls or fields (assuming there's a method named ClearInput)
             ClearInput();
+
             if (txtItemID.Text == string.Empty)
             {
+                // If the text in txtItemID is empty, enable insertion and disable update and delete
                 EnableInsert(true);
                 EnableUpdate(false);
                 EnableDelete(false);
             }
             else
             {
+                // If there's text in txtItemID
                 EnableInsert(false);
                 try
                 {
+                    // Loop through each item in the items list
                     foreach (Item item in items)
                     {
                         if (item.Id == int.Parse(txtItemID.Text))
                         {
+                            // If the ID of the item matches the text in txtItemID, enable update and delete
                             EnableUpdate(true);
                             EnableDelete(true);
+
+                            // Output the details of the item (assuming this method displays item details)
                             OutputItem(itemService.GetByItemById(int.Parse(txtItemID.Text)));
                             break;
                         }
                         else
                         {
+                            // If no matching ID is found, disable update and delete
                             EnableUpdate(false);
                             EnableDelete(false);
                         }
@@ -161,11 +170,26 @@ namespace cafe_pos_system.forms
                 }
                 catch (Exception ms)
                 {
+                    // Catch and display any exception that occurs during parsing
                     MessageBox.Show(ms.Message, "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
+
+            /*
+                1. **Text Change Event**: This method (`txtItemID_TextChanged`) is triggered when the text in the `txtItemID` textbox changes.
+                2. **Item Retrieval**: It retrieves a list of items using the `itemService`.
+                3. **Clear Input**: Clears the input controls or fields.
+                4. **Handling Empty Text**: If `txtItemID` is empty, it enables insertion and disables update and delete functionalities.
+                5. **Non-empty Text Handling**: If `txtItemID` has text:
+                    - Disables insertion.
+                    - Tries to parse the text as an integer within a try-catch block.
+                    - Loops through each item in the retrieved item list.
+                    - If a matching ID is found, it enables update and delete functionalities and outputs details of the item.
+                    - If no matching ID is found, it disables update and delete functionalities.
+                6. **Exception Handling**: Catches and displays any exceptions that occur during the parsing of the text as an integer. 
+            */
         }
+
 
         private void OutputItem(Item item)
         {

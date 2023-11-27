@@ -17,9 +17,11 @@ namespace cafe_pos_system.forms
     public partial class frmStaff : Form
     {
         private StaffService staffService = new StaffService();
-        public frmStaff()
+        private frmDashboard frmDashboard;
+        public frmStaff(frmDashboard frmDashboard)
         {
             InitializeComponent();
+            this.frmDashboard = frmDashboard;
         }
 
         private Staff GetInputStaff()
@@ -84,6 +86,9 @@ namespace cafe_pos_system.forms
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            //PictureService.BrowsePicture means that when you invoke this mehtod it will open file dialog
+            //allow you to browse for a picture
+            //after done selecting a picture, the picture will be stored in pbStaffPhoto.Image
             pbStaffPhoto.Image = PictureService.BrowsePicture();
         }
 
@@ -95,6 +100,7 @@ namespace cafe_pos_system.forms
                 staffService.InsertStaff(staff);
                 MessageBox.Show("Successully added a new staff", "Add Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DisplayToDGV("");
+                frmDashboard.ReloadDashboard();
             }
         }
 
@@ -168,6 +174,7 @@ namespace cafe_pos_system.forms
                 MessageBox.Show("Successully deleted");
                 ClearInput();
                 DisplayToDGV("");
+                frmDashboard.ReloadDashboard();
             }
 
         }

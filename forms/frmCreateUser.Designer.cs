@@ -443,7 +443,6 @@
             this.Name = "frmCreateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create User";
-            this.Load += new System.EventHandler(this.frmCreateUser_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -45,7 +45,7 @@ namespace cafe_pos_system.forms
             DialogResult result = MessageBox.Show("Are you sure you want to delete this invoice?", "Delete Invoice", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-
+                //in order to delete an invoice, it's better to delete invoice details first to avoid foreign key error
                 invoiceService.DeleteInvoiceDetails(invoice.Id);
                 invoiceService.DeleteInvoice(invoice.Id);
                 frmDashboard.ReloadDashboard();
