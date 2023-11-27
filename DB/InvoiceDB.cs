@@ -144,7 +144,7 @@ namespace cafe_pos_system.DB
             {
                 List<InvoiceDetail> invoiceDetailsList = new List<InvoiceDetail>();
 
-                string storedProcedureName = "spGetInvoiceDetails";
+                string storedProcedureName = "spGetInvoiceDetail";
                 SqlCommand command = new SqlCommand(storedProcedureName, con);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@invoiceId", invoiceId);

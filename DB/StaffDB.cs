@@ -187,33 +187,6 @@ namespace cafe_pos_system.DB
             }
             
         }
-
-        public string GetStaffName(int staffId)
-        {
-            try
-            {
-                string storedProcedureName = "spGetStaffName";
-                SqlCommand command = new SqlCommand(storedProcedureName, con);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@staffId", staffId);
-                con.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                string staffName = "";
-                if (reader.Read())
-                {
-                    staffName = reader["staffName"].ToString();
-                }
-                reader.Close();
-                con.Close();
-                return staffName;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return string.Empty;
-            }
-            
-        }
     }
 
 }
