@@ -77,6 +77,7 @@ namespace cafe_pos_system.forms
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtItemID.Text = string.Empty;
             ClearInput();
         }
 
