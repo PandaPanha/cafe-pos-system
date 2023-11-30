@@ -135,23 +135,32 @@ namespace cafe_pos_system.forms
                 
                 foreach (Staff staff in staffs)
                 {
-                    if (staff.Id == int.Parse(txtStaffID.Text) && accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
+                    if(staff.Id == int.Parse(txtStaffID.Text))
                     {
-                        
-                        EnableInput(true);
+                        if (accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
+                        {
+
+                            EnableInput(true);
+                            EnableButtonCreate(false);
+                            EnableButtonUpdate(true);
+                            OutputStaff(GetStaffAccount(), staff);
+                        }
+                        else if (!accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
+                        {
+
+                            EnableInput(true);
+                            EnableButtonCreate(true);
+                            EnableButtonUpdate(false);
+                            OutputStaff(GetStaffAccount(), staff);
+                        }
+                        break;
+                    }
+                    else
+                    {
+                        EnableInput(false);
                         EnableButtonCreate(false);
-                        EnableButtonUpdate(true);
-                        OutputStaff(GetStaffAccount(), staff);
-                    }
-                    else if(staff.Id == int.Parse(txtStaffID.Text) && !accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
-                    {
-                        
-                        EnableInput(true);
-                        EnableButtonCreate(true);
                         EnableButtonUpdate(false);
-                        OutputStaff(GetStaffAccount(), staff);
                     }
-                    
                 }
             }
             
