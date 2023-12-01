@@ -32,7 +32,7 @@ namespace cafe_pos_system.forms
             lblinvoiceDate.Text = invoice.InvoiceDate;
             lblWaitingNo.Text = invoice.WaitingNo.ToString();
             lblSubTotal.Text = invoice.SubTotal.ToString("$0.00");
-            lblDiscount.Text = invoice.Discount.ToString() + "%";
+            lblDiscount.Text = (invoice.Discount * 100).ToString("0.") + "%";
             lblGrandTotal.Text = invoice.GrandTotal.ToString("$0.00");
             lblRecieve.Text = invoice.ReceivedMoney.ToString("$0.00");
             lblChangeMoney.Text = invoice.ChangeMoney.ToString("$0.00");

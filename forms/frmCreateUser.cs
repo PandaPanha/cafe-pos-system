@@ -139,7 +139,7 @@ namespace cafe_pos_system.forms
                     {
                         if (accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
                         {
-
+                            //allow to update existed account, but not input
                             EnableInput(true);
                             EnableButtonCreate(false);
                             EnableButtonUpdate(true);
@@ -147,7 +147,7 @@ namespace cafe_pos_system.forms
                         }
                         else if (!accountService.HasStaffAccount(int.Parse(txtStaffID.Text)))
                         {
-
+                            //allow to create an account for user who has not own an account, but not update
                             EnableInput(true);
                             EnableButtonCreate(true);
                             EnableButtonUpdate(false);
@@ -157,6 +157,7 @@ namespace cafe_pos_system.forms
                     }
                     else
                     {
+                        //if input staffid is not exist disable input, create, and update
                         EnableInput(false);
                         EnableButtonCreate(false);
                         EnableButtonUpdate(false);
